@@ -1,0 +1,78 @@
+
+button{
+    margin: 0px auto;
+    background-color: none;
+    color: inherit;
+    border: none;
+    padding: 0px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+.bgimg{
+    background-image: url("images/wallpaper.jpg");
+} 
+ .header{
+        background-color: antiquewhite;
+        text-decoration:none;
+        
+        }
+        
+.header a {
+        
+        padding:50%; 
+        border-radius: 10px;
+        background-color:rgb(59, 12, 12);
+        color:white;
+        padding: 10px 20px;
+        font-size: 19px;
+        cursor: pointer;
+        float: right;
+
+         }
+        .btn  {
+        
+            /* padding:50%; 
+            border-radius: 10px;
+            background-color:rgb(59, 12, 12);
+            color:white;
+            padding: 10px 20px;
+            font-size: 19px;
+            cursor: pointer;
+            float: right; */
+            margin: 0px auto;
+            background-color: none;
+            color: inherit;
+            border: none;
+            padding: 0px;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+    
+             }
+          .foodlogo {
+width: 20%;
+height: 20%;
+ }
+ .navlink{
+     padding: 20%;
+ }
+ .sign_submit {
+    float:center;
+ }
+ form{
+     margin:45px 500px 100px 500px;
+     border: 1px solid burlywood;
+     padding:15px; 
+     background-color:burlywood;
+
+ }
+.vegimg1 {
+    margin: 5px;
+    border: 1px  ;
+     width:180px;
+    height:180px;
+    /* display:grid; */
+    height:40vh;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    }

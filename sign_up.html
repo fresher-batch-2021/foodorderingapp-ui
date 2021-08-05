@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+            
+             <center><h3 style =color:brown>REGISTER</h3></center> 
+            <form  onsubmit="register()">   
+                <label for= "name">Name(*)</label>
+                <input type="text" name="name" id="name" placeholder="Enter the Name" required autofocus> <br/>
+                <label for="email">Email(*)</label>
+                <input type="email" name="email" id="email" required > <br/>
+                <label for="password">Password(*)</label>
+                <input type="password" name="password" id="password" required> <br/>
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob"> <br/>
+                <label for="role">Select Role(*)</label>
+                <input type="radio" name="role" value="USER" checked required> USER 
+                <input type="radio" name= "role" value="ADMIN" required> ADMIN <br/>
+                 
+                <button type="button" class="sign_submit"style =color:brown>Submit</button>
+            </form>
+            <script>
+            function register()
+            {
+                event.preventDefault();
+                const name=document.querySelector("#name").value;
+                
+                const email=document.querySelector("#email").value;
+                
+                const password=document.querySelector("#password").value;
+                const dob=document.querySelector("#dob").value;
+            
+                    if(password.length < 8)
+                    {
+                        alert("password must be greater than 8characters");
+                    }
+                    else {
+                        alert("Registration Successful");
+                        console.log(name=+"",email=+"",password=+"",dob=+"");
+
+             window.location.href="index.html";
+                    }
+                 let userObj={
+                 "name" : name,
+                 "email" : email,
+                 "password": password,
+                 "dob" : dob,
+             }
+                };
+
+             console.log(userObj);
+             
+        
+        </script>
+        </body>
+        </html>
+    
