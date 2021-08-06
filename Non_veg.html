@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header id="header"></header>
+
+
     <div class="fd">
         <img src="images/chicken briyani.jpg" alt="chicken" style="width:200px;height:200px;"><br>
         <button><a class="Ordernow" href="Ordernow.html">Ordernow</a></button><br>
@@ -17,5 +21,10 @@
    <img src="images/Fried rice.jpg" alt="Fried rice" style="width:200px;height:200px;"><br>
    <button><a class="Ordernow" href="Ordernow">buy_now</a></button>
     </div>
+    <script src="jquery.js"></script>
+
+   <script>
+       $("#header").load("header.html") 
+       </script>
 </body>
 </html>

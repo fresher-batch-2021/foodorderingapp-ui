@@ -1,19 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
+    <header id="header"></header>
 
-<form action="/action_page.php">
+
+
+<form onsubmit="login()">
     <label for="Email_ID"> Email Id:</label>
     <input type="Email_ID" id="Email_Id" name="Email_ID"placeholder="Enter the mailID"><br><br>
     <label for="Password"> Password:</label>
     <input type="Password" id="Password" name="password" placeholder="Enter the password"><br><br>
-    <button>Login </button><br><br>
+    <button>Login </button><br>
+    <p>Note:emailid=rhema@gmail.com<br>password=987654321</p>
     
-    <a href="sign_up.html" style="color:red;">signup</a>
-    </form>
-</body>
+    <a href="sign_up.html" style="color:red;">signup</a> 
 
+    </form>
+    <script>
+            function login()
+            {
+                event.preventDefault();
+                const email=document.getElementById("Email_Id").value;
+                const password=document.getElementById("Password").value;
+
+                if(email ==="rhema@gmail.com" && password === "987654321")
+                    {
+                        alert("login successful");
+                        window.location.href="index.html";
+                    }
+                    else
+                    {
+                        alert("wrongpassword");
+                    }
+                 
+             }
+
+    </script>
+    <script src="jquery.js"></script>
+
+    <script>
+        $("#header").load("header.html") 
+        </script>
+ </body>
 </html>  

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header id="header"></header>
+
+
             
              <center><h3 style =color:brown>REGISTER</h3></center> 
             <form  onsubmit="register()">   
@@ -17,13 +20,11 @@
                 <input type="email" name="email" id="email" required > <br/>
                 <label for="password">Password(*)</label>
                 <input type="password" name="password" id="password" required> <br/>
-                <label for="dob">Date of Birth</label>
-                <input type="date" name="dob" id="dob"> <br/>
-                <label for="role">Select Role(*)</label>
-                <input type="radio" name="role" value="USER" checked required> USER 
-                <input type="radio" name= "role" value="ADMIN" required> ADMIN <br/>
+                <label for="confirmpassword">confirmpassword</label>
+                <input type="password" name="confirmpassword" id="confirmpassword"> <br/>
+                <button >submit</button>
                  
-                <button type="button" class="sign_submit"style =color:brown>Submit</button>
+                <button>back</button>
             </form>
             <script>
             function register()
@@ -34,30 +35,35 @@
                 const email=document.querySelector("#email").value;
                 
                 const password=document.querySelector("#password").value;
-                const dob=document.querySelector("#dob").value;
-            
-                    if(password.length < 8)
+                const confirmpassword=document.querySelector("#confirmpassword").value;
+
+                if(password.length < 8)
                     {
                         alert("password must be greater than 8characters");
                     }
-                    else {
-                        alert("Registration Successful");
-                        console.log(name=+"",email=+"",password=+"",dob=+"");
-
-             window.location.href="index.html";
+                    else if(password!=confirmpassword)
+                    {
+                        alert("confirmpassword must be equal to password");
                     }
-                 let userObj={
+                    else {
+                        let userObj={
                  "name" : name,
                  "email" : email,
                  "password": password,
-                 "dob" : dob,
-             }
-                };
+                        };
+                        console.log(userObj);
+                        alert("Registration Successful");
+                          window.location.href="index.html";
+                    }
+                 
+             };
 
-             console.log(userObj);
-             
-        
-        </script>
+                </script>
+                <script src="jquery.js"></script>
+
+                <script>
+                    $("#header").load("header.html") 
+                    </script>
         </body>
         </html>
     

@@ -6,30 +6,92 @@
     <meta name="viewport" content="width, initial-scale=1.0">
     <title>veg</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+    </style>
 </head>
 <body>
-    <section class="vegimg1">
-        <div>
-            <img class = "vegimg"src="images/veg-biryani.jpg" alt="chicken" style="width:200px;height:200px;"><br>
-           <button><a class="Ordernow.html" href="Ordernow.html">Ordernow</a></button>
+     <header id="header"></header>
+
+
+     <section class="vegimg1"> 
+        <div class="row">
+             <div class="column">
+            <img class = "vegimg"src="images/veg-biryani.jpg" alt="chicken"style="width:200px;height:200px;"
+                                                           onclick="myfunction(this);">                                 ><br>
+           <button><a class="Ordernow" href="Ordernow.html">Ordernow</a></button>
         </div>
-    
+         <img class = "vegimg" src="images/veg noodles.jpg" alt="mutton" style="width:200px;height:200px;"><br>
+       <button><a class="Ordernow" href="Ordernow.html">Ordernow</a></button>
+       </div>
         <div>
-            <img class = "vegimg" src="images/veg noodles.jpg" alt="mutton" style="width:200px;height:200px;"><br>
+             <img class = "vegimg" src="images/Dosa.jpg" alt="Mushroom" style="width:200px;height:200px;"><br>
        <button><a class="Ordernow" href="Ordernow.html">Ordernow</a></button>
         </div>
-        <div>
-            <img class = "vegimg" src="images/Dosa.jpg" alt="Mushroom" style="width:200px;height:200px;"><br>
-       <button><a class="Ordernow" href="Ordernow.html">Ordernownow</a></button>
-        </div>
+
       <div>
        <img class = "vegimg" src="images/Naan.jpg" alt="Fried rice" style="width:200px;height:200px;"><br>
        <button><a class="Ordernow" href="Ordernow.html"> Ordernow</a></button><br>
        </div>
-    
-    </section>
+       </section>
+         <script src="jquery.js"></script>
+    <script>
+       $("#header").load("header.html") 
+       </script>
+         </body> 
+         </html>
+         
+       
    
 
     
-</body>
-</html>

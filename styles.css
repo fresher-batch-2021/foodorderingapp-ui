@@ -1,5 +1,5 @@
 
-button{
+ button{ 
     margin: 0px auto;
     background-color: none;
     color: inherit;
@@ -7,14 +7,15 @@ button{
     padding: 0px;
     font: inherit;
     cursor: pointer;
-    outline: inherit;
+    outline: inherit;  
 }
-.bgimg{
+body{  
     background-image: url("images/wallpaper.jpg");
-} 
+}  
  .header{
         background-color: antiquewhite;
         text-decoration:none;
+        
         
         }
         
@@ -30,17 +31,7 @@ button{
         float: right;
 
          }
-        .btn  {
-        
-            /* padding:50%; 
-            border-radius: 10px;
-            background-color:rgb(59, 12, 12);
-            color:white;
-            padding: 10px 20px;
-            font-size: 19px;
-            cursor: pointer;
-            float: right; */
-            margin: 0px auto;
+        .btn  { margin: 0px auto;
             background-color: none;
             color: inherit;
             border: none;
@@ -51,11 +42,28 @@ button{
     
              }
           .foodlogo {
-width: 20%;
-height: 20%;
- }
+                width: 20%;
+                height: 20%;
+                /* display: inline; */
+                float: left;
+                }
+
+          .header_h1{
+            color: blanchedalmond;
+        }
  .navlink{
-     padding: 20%;
+     padding: 0.5%;
+     text-decoration: none;
+     color: blanchedalmond;
+     font-size: 30px;
+ }
+
+ .navlink:hover {
+     background-color: chocolate;
+ }
+ .navlink:focus, .navlink:active {
+     background-color: cornsilk;
+     transition: none;
  }
  .sign_submit {
     float:center;
@@ -65,14 +73,21 @@ height: 20%;
      border: 1px solid burlywood;
      padding:15px; 
      background-color:burlywood;
-
  }
-.vegimg1 {
-    margin: 5px;
-    border: 1px  ;
-     width:180px;
-    height:180px;
-    /* display:grid; */
-    height:40vh;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    }
+ .content{
+ color: blanchedalmond;   
+ }
+.vegimg{
+    float: left;
+    padding: 2%;
+
+}
+ .Ordernow { 
+     float: left;
+}
+
+    
+
+    
+
+
