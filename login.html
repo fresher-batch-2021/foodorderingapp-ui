@@ -6,39 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
  <link rel="stylesheet" href="styles.css">
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <header id="header"></header>
-
-
-
 <form onsubmit="login()">
-    <label for="Email_ID"> Email Id:</label>
-    <input type="Email_ID" id="Email_Id" name="Email_ID"placeholder="Enter the mailID"><br><br>
-    <label for="Password"> Password:</label>
-    <input type="Password" id="Password" name="password" placeholder="Enter the password"><br><br>
+    <label for="email"> EmailId:</label><br><br>
+    <input type="email" id="email" name="email"placeholder="Enter the mailID"><br><br>
+    <label for="password"> password:</label><br><br>
+    <input type="password" id="password" name="password" placeholder="Enter the password"><br><br>
     <button>Login </button><br>
-    <p>Note:emailid=rhema@gmail.com<br>password=987654321</p>
     
-    <a href="sign_up.html" style="color:red;">signup</a> 
+    <a href="forgotpassword.html" style="color:red;">Forgotpassword</a> 
 
     </form>
     <script>
             function login()
             {
                 event.preventDefault();
-                const email=document.getElementById("Email_Id").value;
-                const password=document.getElementById("Password").value;
+                const email=document.getElementById("email").value;
+                const password=document.getElementById("password").value;
 
-                if(email ==="rhema@gmail.com" && password === "987654321")
+                    if(password.length < 8)
                     {
-                        alert("login successful");
-                        window.location.href="index.html";
+                        alert("password must be 8 characters");
+
                     }
                     else
                     {
-                        alert("wrongpassword");
+                          const userobj={
+                         "email" : email,
+                          "password": password
+                     };
+                 console.log(userobj);
+                 const url="https://product-mock-api.herokuapp.com/foodapp/api/v1/auth/login";
+                 axios.post(url,userobj).then(res=>
+                 {
+                     let data=res.data;
+                     console.log(data);
+                     alert("successfully login");
+                     window.location.href="index.html";
+                 }) .catch(err=>
+                 {
+                     console.error("err");
+                     alert("Incorrect Password");
+                 });
+                 
                     }
                  
              }

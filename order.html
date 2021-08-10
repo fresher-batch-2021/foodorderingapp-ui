@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    
+        <form onsubmit="orderNow();"> 
+<label for="name"> customer name</label><br>
+<input type="text" name="name" id="name" required placeholder="Enter the name"><br><br>
+<label for="phonenumber">contact number</label><br>
+<input type="number" name="phonenumber" id="phonenumber" required placeholder="Enter the phonenumber"><br><br>
+<label for="DeliveryDate">Deliverydate</label><br>
+<input type="date" name="DeliveryDate" id="DeliveryDate" required placeholder="Enter the date"><br><br>
+<label for="DeliveryTime">Deliverytimer</label><br>
+<input type="time" name="DeliveryTime" id="DeliveryTime" required placeholder="Enter the time"><br><br>
+<label for="quantity">Quantity</label><br>
+<input type="text" name="quantity" id="quantity" required placeholder="Enter the Quantity"><br><br>
+<label for="address">address</label><br>
+<input type="address" name="address" id="address" required placeholder="Enter the valid address"><br><br>
+<button type="submit"><a href="payment.html">orderplaced</a></button>
+<button type="button"> <a href="index.html">cancel </a></button>
+</form>
+
+
+<script src="jquery.js"></script>
+    <script>
+       $("#header").load("header.html");
+       function orderplaced() {
+         event.preventDefault();
+       const name = document.querySelector("#name").value;
+       const phonenumber = document.querySelector("#phonenumber").value;
+       const DeliveryDate = document.querySelector("#DeliveryDate").value;
+       const DeliveryTime = document.querySelector("#DeliveryTime").value;
+       const quantity = document.querySelector("#quantity").value;
+       const address = document.querySelector("#address").value;
+       
+              
+if (name == "" || name == null || name.trim() == "")
+{
+    alert("Name cannot be blank");
+            
+}
+else if (phonenumber == "" || phonenumber == null || phonenumber.trim() == "")
+     {
+        alert("Phone number cannot be blank");
+     }
+else if (DeliveryDate == "" || DeliveryDate == null || DeliveryDate.trim() == "")
+        {
+        alert("date cannot be blank");
+        }
+else  if (DeliveryTime == "" || DeliveryTime ==null || DeliveryTime.trim() ==""){
+            alert("Time cannot be blank");
+            }
+ else if (quantity ==="" || quantity === null || quantity.trim() == "" || quantity <= 0){
+                alert("Quantity cannot be blank");
+                }
+else if (address === "" || address === null || address.trim() == ""){
+                    alert("Address cannot be blank");
+                    }
+else
+                     {
+                       const regobj = {
+                       "Name":name,
+                       "phonenumber":phonenumber,
+                       "date":date,
+                        "time":time,
+                        "quantity":quantity,
+                        "address":address
+                   
+                         };
+
+                            alert("Successfully Registered");
+                            window.location.href = "payment.html";
+              
+                     }
+                 }
+        </script>
+</body>
+</html>

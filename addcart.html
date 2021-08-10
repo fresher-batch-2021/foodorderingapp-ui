@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cartitems</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  
+  <body>
+    <header id="header"></header>
+      <h3>Cart Items</h3>
+      <section>
+        <table class="carttable">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>FoodName</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="cart-table">
+        </tbody>
+        </table>
+       <button> <a  class="order-button" href="order.html"  >Order Now</a></button>
+      </section>
+ 
+  <script>
+      function displayitems() {
+        let cartItems= [
+          {SNo: 1,FoodName:"veg-briyani", Price:120},
+           {SNo:2,FoodName:"Veg noodles",Price:80},
+          {SNo:3,FoodName:"Dosa",Price:27},
+          {SNo:4,FoodName:"Vegburger",Price:187}
+        ];
+
+        let content = "";
+        for (let cart of cartItems) {
+           let deletebutton=`<a href="addcart.html" onClick="deleteitem()" > Delete </a>`
+          content =
+            content +
+            "<tr><td>" + cart.SNo + "</td><td>" + cart.FoodName + "</td><td>" + cart.Price + "</td><td>"+ deletebutton;
+        }
+        console.log(content);
+
+        var total=0;
+        for (let i = 0; i < cartItems.length; i++)
+         {
+            total += cartItems[i].Price;
+         }
+         content+="<tr><td colspan='2'>Total </td><td>Rs." + total + "</td></tr>";
+        console.log(total);
+        document.querySelector("#cart-table").innerHTML = content;
+      }
+      displayitems();
+      function deleteitem()
+      {
+        let del=confirm("Do You want remove this item from cart");
+        if(del)
+        {
+          alert("Successfully Deleted");
+          window.location.href="task";
+        }
+        
+      }
+        </script>
+        <script src="jquery.js"></script>
+        <script>
+             $("#header").load("header.html") 
+             </script>
+      
+ </body>
+</html>

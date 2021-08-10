@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<body>
+    
+    <header id="header"></header>
+            <h2 class="reg">REGISTER</h2>
+            <form  onsubmit="register()">  
+                
+                <label for= "name">Name(*):</label><br>
+                <input type="text" name="name" id="name" placeholder="Enter the Name" required autofocus> <br/><br>
+            
+        
+                 <label for="email">Email(*):</label><br>
+                <input type="email" name="email" id="email"placeholder="Enter the Email" required > <br/><br>
+            
+                <label for="mobileNo">Mobilenumber(*):</label><br>
+                <input type="mobilenumber" name="mobileNo" id="mobileNo"placeholder="Enter the mobilenumber" required > <br/><br>
+           
+                <label for="password">Password(*):</label><br>
+                <input type="password" name="password" id="password" placeholder="Enter the password"place required> <br/><br>
+            
+                <label for="confirmpassword">confirmpassword:</label><br>
+                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Enter the confirmPassword"> <br/><br>
+            
+            <button type="submit">submit</button>
+          <button><a href="login.html">back</a></button>
+            </form>
+            <script>
+            function register()
+            {
+                event.preventDefault();
+                const name=document.querySelector("#name").value;
+                
+                const email=document.querySelector("#email").value;
+                const mobileNo=document.querySelector("#mobileNo").value;
+                
+                const password=document.querySelector("#password").value;
+                const confirmpassword=document.querySelector("#confirmpassword").value;
+
+                if(password.length < 8)
+                {
+                        alert("password must be greater than 8characters");
+                }
+                else if(password!=confirmpassword)
+                {
+                        alert("confirmpassword must be equal to password");
+                }
+                else 
+                {
+                  const userobj={
+                 "name" : name,
+                 "email" : email,
+                 "mobileNo":mobileNo,
+                 "password": password
+                     };
+                 console.log(userobj);
+                 const url="https://product-mock-api.herokuapp.com/foodapp/api/v1/auth/register";
+                 axios.post(url,userobj).then(res=>
+                 {
+                     let data=res.data;
+                     console.log(data);
+                     alert("successfully register");
+                     window.location.href="login.html";
+                 }) .catch(err=>
+                 {
+                     console.error("err");
+                     alert("error");
+                 });
+                 
+     
+                }
+                 
+             }
+
+                </script>
+                <script src="jquery.js"></script>
+
+                <script>
+                    $("#header").load("header.html") 
+                    </script>
+                            </body>
+        </html>
+    
