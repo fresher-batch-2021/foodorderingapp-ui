@@ -1,5 +1,4 @@
-
- button{ 
+button{ 
     margin: 0px auto;
     background-color: none;
     color: inherit;
@@ -9,10 +8,11 @@
     cursor: pointer;
     outline: inherit;  
 }
-body{  
+/* body{  
     background-image: url("images/wallpaper.jpg");
-}  
- .header{
+}   */
+
+/* .header{
         background-color: antiquewhite;
         text-decoration:none;
         }
@@ -21,14 +21,13 @@ body{
 
      border-radius: 10px;
         background-color:rgb(59, 12, 12);
-        color:white;
+        /* color:white; 
         padding: 10px 20px;
         font-size: 19px;
         cursor: pointer;
         float: right;
-
-         }
-        .btn  { margin: 0px auto;
+}
+.btn  { margin: 0px auto;
             background-color: none;
             color: inherit;
             border: none;
@@ -37,30 +36,55 @@ body{
             cursor: pointer;
             outline: inherit;
     
-             }
-          .foodlogo {
-                width: 20%;
-                height: 20%;
-                float: left;
-                }
+} */
+         
 
-          .navlink{
-     padding: 0.5%;
+/* Header page  */
+/* .navbar img{
+    
+} */
+
+.header-class {
+    display: inline-block;
+    width: 30%;
+    position: absolute;
+    left: 70%;
+}
+
+.foodlogo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+ }
+
+ .header_h1{
+    padding-bottom: 0;
+    margin-bottom: 3%;
+ }
+
+
+.navlink{
+     padding: 0%;
      text-decoration: none;
-     color: blanchedalmond;
+      color: grey; 
      font-size: 30px;
  }
 
+ 
  .navlink:hover {
      background-color: chocolate;
  }
+ 
  .navlink:focus, .navlink:active {
      background-color: cornsilk;
      transition: none;
  }
+ 
  .sign_submit {
     float:center;
  }
+ 
  form{
      margin:65px 500px 100px 500px;
      border: 4px solid burlywood;
@@ -68,46 +92,35 @@ body{
      background-color:burlywood;
  }
  .content{
- color: white;   
+ color: black;  
+  
  }
-.vegimg{
-    float: left;
-    padding: 2%;
-    width:200px;
-    height:200px;
-}
+
 .Nonvegimg{
-    float: left;
+    position: absolute;
     padding: 2%;
-    width:200px;
-    height:200px;
+    width:20px;
+    height:20px;
 
 }
-.veg
-{
-    position :absolute;
-    top: 50%;
-    left: 45%;
-    width:90px;
-    height:90px;
- }
-  
-.Nonveg{
-    position :absolute;
-    top: 50%;
-    left: 55%;
-    width:90px;
-    height:90px;
+.vegimg{
+    position: absolute;
+    /* margin:65px 500px 100px 500px; */
+    padding: 2%;
+    width:20px;
+    height:20px;
+
 }
+
+
+
 .reg{
     text-align :center;
     color: brown;
     border:3px brown;
     
 }  
-.header_h1{
-     color:white;
-}
+
 
 .order-button
 {
@@ -127,6 +140,59 @@ body{
   text-align: left;
   padding: 8px;
 }
+
+/* index page  */
+
+.category {
+    width: 400px;
+    height: 200px;
+    /* background-color:#FEFFE2; */
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    border-radius: 10px;
+
+}
+.vegdiv1
+{
+    /* position :absolute;
+    top: 25%;
+    left: 15%;
+    width:100px;
+    height:100px;
+    width:90%; */
+    margin: 200px 100px 200px 100px;
+}
+
+.vegdiv
+{
+    /* position :absolute;
+    top: 25%;
+    left: 15%;
+    width:100px;
+    height:100px;
+    width:90%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+
+    
+
+ }
+   
+.Nonveg{
+    position :absolute;
+    top: 25%;
+    left: 55%;
+    width:100px;
+    height:100px;
+}
+/* *{
+background color:s;
+} */
 
 
 

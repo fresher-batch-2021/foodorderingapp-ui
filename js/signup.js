@@ -1,4 +1,3 @@
-$("#header").load("header.html") 
 
 function register()
 {
@@ -13,7 +12,7 @@ function register()
 
     if(password.length < 8)
     {
-            alert("password must be greater than 8characters");
+            alert("password must be greater than 8 characters");
     }
     else if(password!=confirmpassword)
     {
@@ -34,7 +33,7 @@ function register()
          let data=res.data;
          console.log(data);
          alert("successfully register");
-         window.location.href="login.html";
+        //  window.location.href="login.html";
      }) .catch(err=>
      {
          console.error("err");

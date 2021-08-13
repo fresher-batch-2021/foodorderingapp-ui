@@ -1,5 +1,5 @@
 
- $("#header").load("header.html") 
+ 
  
 function login()
 {
@@ -29,14 +29,20 @@ function login()
      axios.post(url,userobj).then(res=>
      {
          let data=res.data;
-         console.log(data);
-         alert("successfully login");
-         window.location.href="index.html";
-     }) .catch(err=>
-     {
-         console.error("err");
-         alert("Incorrect Password");
-     });
+         localStorage.setItem("LOGGED_IN_USER",JSON.stringify(res.data));
+        alert("login successfull");
+        if(user.role == "ADMIN"){
+        window.location.href="";
+        }
+        else{
+          window.location.href="";
+        }
+      }).catch(err =>{
+        console.log(err);
+        alert("unable to login");
+
+      });
+         
      
         }
      

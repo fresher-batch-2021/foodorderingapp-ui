@@ -14,19 +14,15 @@
     <label for="email"> EmailId:</label><br><br>
     <input type="email" id="email" name="email"placeholder="Enter the mailID"><br><br>
     <label for="password"> password:</label><br><br>
-    <input type="password" id="password" name="password" placeholder="Enter the password"><br><br>
+    <input type="password" id="password" name="password" placeholder="Enter the password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
     <button>Login </button><br>
     
     <a href="forgotpassword.html" style="color:red;">Forgotpassword</a> 
-
-    </form>
+</form>
    
            
     <script src="jquery.js"></script>
     <script src="login.js"></script>
-
-   
-      
-        
+    <script>$("#header").load("header.html")</script>      
  </body>
 </html>  
