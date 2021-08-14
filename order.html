@@ -10,25 +10,25 @@
 
 <body>
     <header id="header"></header>
-    
+    <h2 class="reg"> Order Form </h2>
         <form onsubmit="orderNow();"> 
 <label for="name"> customer name</label><br>
-<input type="text" name="name" id="name" required placeholder="Enter the name"><br><br>
+<input type="text" name="name" id="name" required placeholder="Enter the name" autocomplete="off"><br><br>
 <label for="phonenumber">contact number</label><br>
-<input type="number" name="phonenumber" id="phonenumber" required placeholder="Enter the phonenumber"><br><br>
+<input type="tel" name="phonenumber" id="phonenumber" required placeholder="Enter the phonenumber"autocomplete="off"><br><br>
 <label for="DeliveryDate">Deliverydate</label><br>
-<input type="date" name="DeliveryDate" id="DeliveryDate" required placeholder="Enter the date"><br><br>
+<input type="date" name="DeliveryDate" id="DeliveryDate" required placeholder="Enter the date"autocomplete="off"><br><br>
 <label for="DeliveryTime">Deliverytimer</label><br>
-<input type="time" name="DeliveryTime" id="DeliveryTime" required placeholder="Enter the time"><br><br>
+<input type="time" name="DeliveryTime" id="DeliveryTime" required placeholder="Enter the time"autocomplete="off"><br><br>
 <label for="quantity">Quantity</label><br>
-<input type="text" name="quantity" id="quantity" required placeholder="Enter the Quantity"><br><br>
+<input type="number" name="quantity" id="quantity" required placeholder="Enter the Quantity"autocomplete="off"><br><br>
 <label for="address">address</label><br>
-<input type="address" name="address" id="address" required placeholder="Enter the valid address"><br><br>
+<input type="text" name="address" id="address" required placeholder="Enter the valid address"autocomplete="off"><br><br>
 <button type="submit"><a href="payment.html">orderplaced</a></button>
 <button type="button"> <a href="index.html">cancel </a></button>
 </form>
 <script src="jquery.js"></script>
-    <script src="order.js"></script>
+    <script src="js/order.js"></script>
 
 
 

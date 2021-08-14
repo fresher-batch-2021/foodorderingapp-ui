@@ -5,19 +5,19 @@ function forgotpassword()
 {   
     event.preventDefault();
     const password=document.getElementById("password").value;
-    const confirmpassword=document.getElementById("confirmpassword").value;
+    const resetpassword=document.getElementById("resetpassword").value;
     
 
-        if(confirmpassword  == "")
+        if(resetpassword  == "")
         {
-         alert("confirmpassword cannot be blank");
+         alert("resetpassword cannot be blank");
         }
     
          else
         {
               const userobj={
              "password" :password,
-              "confirmpassword": confirmpassword
+              "resetpassword": resetpassword
                               
                 }
                 alert("Successfully created");

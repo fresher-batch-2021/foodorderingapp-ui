@@ -12,17 +12,16 @@
 
             content = content +
              `
-             <div class="vegdiv">
-                
-                  
-           <a href="addcart.html"><img src="images/${img.imageUrl}" alt="veg-biryani"></a><br>
+            <div class="vegdiv">      
+                <a href="addcart.html"><img class = "vegimg" src="images/${img.imageUrl}" alt="veg-biryani"></a><br>
             
                <p>${img.name}</p>
                <p>${img.price}</p>
              
             </div>`;
             count = count + 1;
-            if (count == 2) {
+            if (count == 2) 
+            {
                 content = content + `<br>`;
                 count = 0;
             }

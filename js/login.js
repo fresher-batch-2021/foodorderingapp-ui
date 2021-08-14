@@ -1,6 +1,5 @@
 
  
- 
 function login()
 {
     event.preventDefault();
@@ -31,12 +30,8 @@ function login()
          let data=res.data;
          localStorage.setItem("LOGGED_IN_USER",JSON.stringify(res.data));
         alert("login successfull");
-        if(user.role == "ADMIN"){
-        window.location.href="";
-        }
-        else{
-          window.location.href="";
-        }
+        window.location.href = "index.html";
+       
       }).catch(err =>{
         console.log(err);
         alert("unable to login");

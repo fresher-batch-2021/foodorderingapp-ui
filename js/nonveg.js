@@ -21,11 +21,13 @@ var images = [{ id:1,imageUrl: "chicken briyani.jpg",name:"chicken briyani",pric
         
        </div>`;
       count = count + 1;
-       if (count == 4 {
+       if (count == 2 ) 
+         {
           content = content + `<br>`;
            count = 0;
        }
-   }
-
+   
+      }
    document.querySelector("#nonvegcontainer").innerHTML = content;
 
+      
