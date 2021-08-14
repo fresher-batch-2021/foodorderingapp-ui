@@ -1,6 +1,6 @@
 
  $("#header").load("header.html")
-alert("welcome");
+
 function forgotpassword()
 {   
     event.preventDefault();

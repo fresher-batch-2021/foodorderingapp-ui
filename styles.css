@@ -12,8 +12,8 @@ button{
      /* display: inline-block; */
     /* width: 20%; */
     position: absolute;
-      left:300px; 
-     right: 600px;
+      left:31% 
+     
 }
 
 .foodlogo {
@@ -69,9 +69,12 @@ button{
 
 }
 .vegimg{
+
     
     width:150px;
     height:150px;
+    float :left;
+    clear:right;
 }
 
 
@@ -90,18 +93,24 @@ button{
   text-decoration: none;
 
 }
-.carttable {
+.cart {
   font-family: arial, sans-serif;
   color: brown;
   border-collapse: collapse;
-  width: 10px;
+  width: 100px;
 }
 
-.carttable td, th {
+.cart td, th {
   border: 1px solid burlywood;
   color: brown;
-  text-align: left;
+  text-align: center;
   padding: 10px;
+  width: 100px; 
+}
+.carttable
+{
+    padding-left:40%;
+    padding-top :5%;
 }
 
 /* index page  */
