@@ -14,4 +14,11 @@ class userservice{
 };
                 return axios.post(url, requestData,{ headers: { Authorization: basicAuth } })
 }
+
+  static register(userobj)
+  {
+       
+     const url="https://e212ecf3-82ab-4f31-b454-c3866556584d-bluemix.cloudantnosqldb.appdomain.cloud/foodorder_users";
+     return axios.post(url,userobj,{ headers :{ 'Authorization':basicAuth }});
+  }
 }

@@ -18,14 +18,14 @@
             <form  onsubmit="register()">  
                 
                 <label for= "name">Name(*):</label><br>
-                <input type="text" name="name" id="name" placeholder="Enter the Name" required pattern="[A-Za-z ]{1,32}"  autocomplete="off" autofocus> <br/><br>
+                <input type="text" name="name" id="name" placeholder="Enter the Name" required pattern="[A-Za-z ]{1,32}"  title="autocomplete="off" autofocus> <br/><br>
             
         
                 <label for="email">Email(*):</label><br>
                 <input type="email" name="email" id="email"placeholder="Enter the Email" required   autocomplete="off" title="Example mail id : example@example.com"  pattern="[a-z0-9._]+@[a-z]+\.[a-z]{2,3}$"> <br/><br>
             
                 <label for="mobileNo">Mobilenumber(*):</label><br>
-                <input type="tel" name="mobileNo" id="mobileNo"placeholder="Enter the mobilenumber" required pattern="[6789][0-9]{9}" autocomplete="off" > <br/><br>
+                <input type="tel" name="mobileNo" id="mobileNo"placeholder="Enter the mobilenumber" required  pattern="[6789][0-9]{9}" autocomplete="off" > <br/><br>
            
                 <label for="password">Password(*):</label><br>
                 <input type="password" name="password" id="password" placeholder="Enter the password"place required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -43,6 +43,7 @@
             
             <script> $("#header").load("header.html") </script>
             <script src="js/signup.js"></script>
+            <script src="userservice.js"></script>
         </body>
         </html>
     
