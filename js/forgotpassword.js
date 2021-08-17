@@ -15,11 +15,11 @@ function forgotpassword()
     
          else
         {
-              const userobj={
-             "password" :password,
-              "resetpassword": resetpassword
+               const userobj={
+               "password" :password,
+               "resetpassword": resetpassword
                               
-                }
+        }
                 alert("Successfully created");
 
                 window.location.href = "index.html";

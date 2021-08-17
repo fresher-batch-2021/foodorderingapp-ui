@@ -6,32 +6,30 @@ const name = document.querySelector("#name").value;
 const phonenumber = document.querySelector("#phonenumber").value;
 const DeliveryDate = document.querySelector("#DeliveryDate").value;
 const DeliveryTime = document.querySelector("#DeliveryTime").value;
-const quantity = document.querySelector("#quantity").value;
 const address = document.querySelector("#address").value;
 
        
 if (name == "" || name == null || name.trim() == "")
 {
-alert("Name cannot be blank");
-     
+ alert("Name cannot be blank");
 }
 else if (phonenumber == "" || phonenumber == null || phonenumber.trim() == "")
 {
  alert("Phone number cannot be blank");
 }
 else if (DeliveryDate == "" || DeliveryDate == null || DeliveryDate.trim() == "")
- {
+{
  alert("date cannot be blank");
- }
-else  if (DeliveryTime == "" || DeliveryTime ==null || DeliveryTime.trim() ==""){
-     alert("Time cannot be blank");
-     }
-else if (quantity ==="" || quantity === null || quantity.trim() == "" || quantity <= 0){
-         alert("Quantity cannot be blank");
-         }
-else if (address === "" || address === null || address.trim() == ""){
-             alert("Address cannot be blank");
-             }
+}
+else  if (DeliveryTime == "" || DeliveryTime ==null || DeliveryTime.trim() =="")
+{
+ alert("Time cannot be blank");
+}
+
+else if (address === "" || address === null || address.trim() == "") 
+{
+  alert("Address cannot be blank");
+}
 else
               {
                 const regobj = {
@@ -42,7 +40,7 @@ else
                  "quantity":quantity,
                  "address":address
             
-                  };
+              };
 
                      alert("Successfully Registered");
                      window.location.href = "payment.html";
