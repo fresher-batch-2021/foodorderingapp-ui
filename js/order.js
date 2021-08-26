@@ -32,18 +32,21 @@ else if (address === "" || address === null || address.trim() == "")
 }
 else
               {
+                let product=JSON.parse(localStorage.getItem("PRODUCTS"));
                 const regobj = {
                 "Name":name,
                 "phonenumber":phonenumber,
                 "date":date,
                  "time":time,
-                 "quantity":quantity,
-                 "address":address
+                "address":address,
+                products:product,
+                status:"intial"
             
               };
+              
 
-                     alert("Successfully Registered");
-                     window.location.href = "payment.html";
+                     alert("Successfully ordered");
+                     window.location.href = "index.html";
        
               }
           }

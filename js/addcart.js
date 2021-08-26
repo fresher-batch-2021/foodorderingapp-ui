@@ -23,7 +23,6 @@ function addProductToLs() {
     let product = {
       "foodname": pro,
       "price": price,
-      "Quantity":0
     };
 
     console.log("product", pro);
@@ -63,6 +62,7 @@ function toCart(product) {
     
   }
   else {
+    product.Quantity=1;
     addProducts(product);
   }
   // let products = this.getAllProducts();
@@ -118,7 +118,7 @@ function deleteCartData(index) {
   console.log(arr[index]);
   localStorage.setItem("PRODUCTS", JSON.stringify(arr));
   window.location.href = "addcart.html";
-  alert("Do You want to remove this item from cart");
+  // alert("Do You want to remove this item from cart");
   // addtocart();
 }
 
@@ -133,8 +133,88 @@ function cartCheck() {
   }
 }
 
+function emptyCart() {
+  localStorage.removeItem("PRODUCTS");
+  document.location.reload();
+}
+///////////
+// loginCheck();
 
-
-
-        
-                    
+function displayCartItems() {
+    console.log("displayCartItems");
+  let cartItem=JSON.parse(localStorage.getItem("cartElements"));
+  // alert(cartItem);
+  console.log(cartItem);
+    let content = `<table>
+    <thead>
+  <tr>
+      <th class="FoodNo">Food.No</th>
+      <th class="Food">Foodname </th>
+      <th class="Price">Price</th>
+      <th class="Quantity">Quantity</th>
+      <th class="delete">Delete</th>
+      
+  </tr>
+      
+  </thead><tbody>`;
+    let end = ` </tbody></table>`;
+    console.log(displayCartItems);
+  var count=1;
+  let sum=0;
+  let total=0;
+    for (let item of CartItems) {
+      total=item.Qty*item.price;
+      content = content + `
+                    <tr>
+                    <td>${count}</td>
+                       
+                       <td>${item.name}</td>
+                       <td>${item.price}</td>
+                       <td>${item.Qty}</td>
+                       <td><a onclick="deleteCartData(${count-1})">delete</a></td>
+                       
+                     </tr>
+                     `;
+                     
+  sum=sum+total;              
+  count++;
+    }
+    localStorage.setItem("TOTAL_BILL_AMOUNT", sum);
+    
+    content  += end;
+    
+    document.querySelector("#cartdata").innerHTML = content;
+  
+  }
+  
+  
+  // Deleting elements in cart
+  function deleteCartData(index){
+    var arr=JSON.parse(localStorage.getItem("cartElements"));//store the value in localstorage changed into json obj and store it in arr
+    if (arr[index].Qty>1)
+     {
+        arr[index].Qty--;
+    }
+    else{
+      arr.splice(index,1);
+    }
+    console.log(arr[index]);
+    localStorage.setItem("cartElements",JSON.stringify(arr));
+    displayCartItems();
+    }
+  
+    function cartcheck()
+    {
+      let cartItem=JSON.parse(localStorage.getItem("cartElements"));
+      if (cartItem==null||cartItem=="")
+       {
+        alert("cart is empty");
+        window.location.href="index.html";
+      } else 
+      {
+        window.location.href="order.html";
+      }
+    }
+    displayCartItems();
+  
+  

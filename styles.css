@@ -1,166 +1,390 @@
-button{ 
-    margin: 0px auto;
-    background-color: none;
-    color: inherit;
-    border: none;
-    padding: 0px;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;  
-}
-.header-class {
-     /* display: inline-block; */
-    /* width: 20%; */
-    position: absolute;
-      left:31% 
-     
+/* ----------------Header----------------- */
+
+* {
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
 }
 
-.foodlogo {
+header {
+    width: 100%;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    font-family: 'Titillium Web', sans-serif;
+    color: black;
+}
+
+.navbar-brand {
+    /* padding: 50px auto 0; */
+    /* display: inline-block; */
+    float: left;
+    color: black;
+}
+
+.navbar-brand-logo {
+    margin: 20px 10px;
+    padding-left: 40px;
+}
+
+.navbar-nav .nav-item {
+    list-style: none;
+    padding-right: 20px;
+    background-color: white;
+    /* border: 1.5px solid black; */
+    border-radius: 5px;
+    padding: 1px 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar-nav {
+    /* position: absolute; */
+    float: left;
+    margin-top: 3%;
+    margin-left: 35%;
+    color: black;
+}
+
+.navbar-itembtn1 a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar-itembtn2 a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.navbar-itembtn1 {
+    padding: 0px 20px;
+    position: absolute;
+    top: 40px;
+    right: 8%;
+    margin-right: 40px;
+}
+
+.navbar-itembtn2 {
+    padding: 0px 30px 0px 30px;
+    position: absolute;
+    top: 8px;
+    right: 2%;
+    margin: 33px 3px 5px 3px;
+}
+
+.searchContainer {
+    position: absolute;
+    top: 15%;
+    display: inline;
+    margin-top: 2px;
+    margin-left: 10%;
+    padding: 2% 1%;
+}
+
+.searchContainer img {
+    position: absolute;
+    left: 87%;
+    top: 35px;
+}
+
+.searchContainer>input[type="text"] {
+    text-align: center;
+    padding: 4px 70px;
+    border-radius: 10px;
+}
+
+
+/* slider */
+
+.slideshow_container {
+    margin: 8% 15px;
+    max-width: 100%;
+    z-index: -2;
+    /* height: 475px; */
+    /* margin: 40px; */
+    /* margin-top: 20px; */
+    /* padding-right: 100px; */
+    /* right: 0; */
+    /* border: 2px solid greenyellow; */
+}
+
+.slideshow_container img {
+    height: 600px;
+    /* position: absolute; */
+    width: 99%;
+    /* margin-top: -2px; */
+    margin: 15px 0px 0px 5px;
+}
+
+.vegcategory {
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+
+.nonvegcategory {
+    width: 500px;
+    height: 300px;
+    float: right;
+}
+
+
+/* veglogo */
+
+
+/* .veg 
+ {
+     position :absolute;
+     top: 25%;
+     left: 20%;
+     width:100px;
+     height:100px;
+} 
+/* Nonveglogo */
+
+
+/* .Nonveg {
+    position: absolute;
+    top: 25%;
+    left: 55%;
     width: 100px;
     height: 100px;
+} */
+
+*/
+/* index page  */
+
+.category {
+    width: 400px;
+    height: 200px;
     position: absolute;
-    top: 0;
- }
-
- .header_h1{
-    padding-bottom: 0;
-    margin-bottom: 3%;
- }
-
-
-.navlink{
-    
-    padding: 10px;
-    text-decoration: none;
-    color: grey; 
-    font-size: 30px;
- }
-
- 
- .navlink:hover {
-     background-color: chocolate;
- }
- 
- .navlink:focus, .navlink:active {
-     background-color: cornsilk;
-     transition: none;
- }
- 
- .sign_submit {
-    float:center;
- }
- 
- form{
-     margin: 100px 500px 100px 500px;
-     border: 4px solid burlywood;
-     padding:20px; 
-     background-color:burlywood;
- }
- .content{
- color: black;  
-  
- }
-
-.nonvegimg{
-   
-    width:150px;
-    height:150px;
-
-}
-.vegimg{
-
-    
-    width:150px;
-    height:150px;
-    float :left;
-    clear:right;
+    top: 40%;
+    left: 37%;
+    border-radius: 10px;
 }
 
 
+/* about content */
 
-
-.reg{
-    text-align :center;
-    color: brown;
-    border:3px brown;
-    margin-top: 100px;
-}  
-
-
-.order-button
-{
-  text-decoration: none;
-
+.aboutcontent {
+    color: black;
 }
+
+
+/* all form */
+
+form {
+    margin: 4% 35%;
+    background-color: #f3e8f9;
+    padding-left: 2%;
+    padding-top: 2%;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #9D52C4;
+    font-size: 18px;
+}
+
+form>input {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    width: 90%;
+    height: 35px;
+    border: 1px solid white;
+}
+
+form>button {
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    /* padding-right: 81%; */
+    border: none;
+    padding: 1.5% 41%;
+    text-align: center;
+}
+
+.forgot-password {
+    margin-left: 40%;
+}
+
+
+/* subheading */
+
+.subheading {
+    text-align: center;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    border: 3px black;
+    margin-top: 150px;
+}
+
+
+/* images align */
+
+.vegimg {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+}
+
+.nonvegimg {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+}
+
+
+/* cart table  */
+
+h2 {
+    margin-bottom: 10px;
+}
+
 .cart {
+    /* text-align: center; */
+    margin-left: 38%;
+}
+
+.carttable {
+    position: fixed;
+    margin: 15% auto auto 10%;
+    width: 100%;
+}
+
+.carttable thead {
+    background-color: #A9A9A9;
+}
+
+.carttable table {
+    min-width: 80%;
+    border-collapse: collapse;
+}
+
+.carttable th,
+td {
+    border: 1px solid grey;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+.carttable tfoot td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.orderbtn {
+    color: black;
+    /* position: absolute;
+    left: 30%; */
+    /* margin-top: 48px; */
+    margin-left: 35%;
+    margin-top: 3%;
+    display: inline-block;
+}
+
+.orderbtn a {
+    text-decoration: none;
+}
+
+.shop-button {
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.shop-button a {
+    text-decoration: none;
+}
+
+
+/* .cart {
   font-family: arial, sans-serif;
-  color: brown;
+  color:darkcyan;
   border-collapse: collapse;
   width: 100px;
 }
 
 .cart td, th {
   border: 1px solid burlywood;
-  color: brown;
+  color:darkcyan;
   text-align: center;
-  padding: 10px;
-  width: 100px; 
+  padding: 20px;
+  width: 10px; 
 }
-.carttable
-{
-    padding-left:40%;
-    padding-top :5%;
+.cartdata{
+    padding-left:30%;
+    padding-top :0%;
+    padding-bottom: 10%;
+    color: darkcyan;
+} */
+
+
+/* vegimag horizontal align */
+
+.cat1 {
+    margin-left: 95px;
+    margin-top: 100px;
 }
 
-/* index page  */
+.product-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
 
-.category {
-    width: 400px;
-    height: 200px;
-    /* background-color:#FEFFE2; */
-    position: absolute;
-    top: 40%;
-    left: 37%;
+.product-box {
+    border: 1px solid black;
     border-radius: 10px;
-
+    margin: 20px;
 }
 
 
-.vegdiv
-   {  
-       justify-content: center; 
-       flex-wrap: wrap; 
-       margin-top: 30px;
-}
+/* ordernow button*/
 
- .nonvegdiv1{
-    justify-content: center; 
-    flex-wrap: wrap; 
-    margin-top:30px ;
- }
-   
-.Nonveg{
-    position :absolute;
-    top: 25%;
-    left: 55%;
-    width:100px;
-    height:100px;
-}
-
-.veg {
-    position :absolute;
-    top: 25%;
-    left: 20%;
-    width:100px;
-    height:100px;
+.order-button {
+    text-decoration: none;
 }
 
 
+/* welcome notify */
+
+.welcome {
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+    font-size: larger;
+}
 
 
-    
+/* .logout
+{
+  padding: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  color:green;
 
-    
+} */
 
-
+.emptycart {
+    color: brown;
+    padding: 10px 15px;
+    font-size: 15px;
+    left: 50%;
+}

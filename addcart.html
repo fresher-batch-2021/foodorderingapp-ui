@@ -1,34 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cartitems</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  
-  <body>
-    <header id="header"></header>
-      <section class="carttable">
-        <table class="cart" >
-          <caption>Cart Items</caption><br>
-          <thead>
-            <tr>
-              <th id="number">S.No</th>
-              <th id="name">FoodName</th>
-              <th id="price">Price</th>
-              <th id="action">Actions</th>
-            </tr>
-          </thead>
-          <tbody id="cart-table">
-        </tbody>
-        </table>
-       <button> <a  class="order-button" href="order.html"  >Order Now</a></button>
-      </section>
 
-         <script src="jquery.js"></script>
-         <script src="js/addcart.js"></script>
-     
- </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="carttable">
+
+        <h2 class="cart">Cartitems</h2>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>FoodName</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>chickenbriyani</td>
+                    <td>2</td>
+                    <td>120</td>
+                    <td><a href=""><i class="fa fa-trash-o" style="font-size:14px;color:red"></a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Dosa</td>
+                    <td>1</td>
+                    <td>80</td>
+                    <td><a href=""><i class="fa fa-trash-o" style="font-size:14px;color:red"></a></td>
+
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>veg-biryani</td>
+                    <td>2</td>
+                    <td>175</td>
+                    <td><a href=""><i class="fa fa-trash-o" style="font-size:14px;color:red"></a></td>
+
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>veg-pizza</td>
+                    <td>3</td>
+                    <td>64</td>
+                    <td><a href=""><i class="fa fa-trash-o" style="font-size:14px;color:red"></a></td>
+
+                </tr>
+            </tbody>
+            <tfoot>
+                <td colspan="3">Total</td>
+                <td>450</td>
+                <td></td>
+
+            </tfoot>
+        </table>
+
+        <div>
+            <button class="orderbtn"><a  href="order.html">Order Now</a></button>
+            <button class="shop-button"><a  href="index.html">continue shopping</a></button></div>
+    </div>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $("#header").load("header.html");
+</script>
+
 </html>

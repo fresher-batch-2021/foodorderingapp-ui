@@ -13,6 +13,10 @@ function forgotpassword()
          alert("resetpassword cannot be blank");
         }
     
+        else if(password!=resetpassword)
+        {
+         alert("password must be as reset password")
+        }
          else
         {
                const userobj={

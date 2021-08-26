@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>project</title>
-    <link rel="stylesheet" href="styles.css">
-    
-   </head>
-<body >
-   <header id="header"></header>
-   <div class="category">
-         <div>
-            <a href="veg.html"><img  class ="veg" src="images/veg icon .png" alt="vegimg"></a>
-         </div>
-         <div>
-           <a href="nonveg.html"><img class="Nonveg" src="images/nonveg icon.png"alt="Nonveg"></a>
-         </div>
-   </div>
-       <script src="jquery.js"></script>
-      <script> 
-       $("#header").load("header.html") 
-       </script> 
-    </body>
-</html>
+    <title>Food Order</title>
 
-         
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header id="header"></header>
+    <div class="slideshow_container"></div>
+
+    <div class="category">
+        <section class="cat1">
+            <hr>
+            <h2 style="text-align: center" ;>CATAGORIES</h2>
+            <div class="product-container" id="container">
+                <a href="veg.html"><img class="vegcategory" src="images/veg-biryani.jpg" alt="vegimg"></a>
+                <p>veg category</p>
+                <a href="nonveg.html"><img class="nonvegcategory" src="images/chicken.jpg" alt="Nonveg"></a>
+                <p>Non-veg category</p>
+                <hr>
+            </div>
+        </section>
+
+
+
+
+        <script src="jquery.js"></script>
+        <script src="slider.js"></script>
+
+        <script>
+            $("#header").load("header.html")
+        </script>
+
+
+
+</body>
+
+</html>
