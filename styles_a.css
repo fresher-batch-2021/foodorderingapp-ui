@@ -1,0 +1,56 @@
+.foodheader {
+    text-align: center;
+}
+
+.foodListAdm table,
+tr,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.foodListAdm {
+    margin-top: 10%;
+    margin-left: 15%;
+    border-collapse: collapse;
+}
+
+.add-food-section {
+    margin-top: 10%;
+}
+
+.add-food-section h2 {
+    text-align: center;
+}
+
+.add-food-section form {
+    margin: 4% 35%;
+    background-color: #f3e8f9;
+    padding-left: 2%;
+    padding-top: 2%;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #9D52C4;
+    font-size: 18px;
+    padding-bottom: 2%;
+}
+
+.add-food-section form>input {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    width: 90%;
+    height: 35px;
+    border: 1px solid white;
+}
+
+.add-food-section form>button {
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    /* padding-right: 81%; */
+    border: none;
+    padding: 3% 41%;
+    text-align: center;
+    margin: 5% auto;
+}

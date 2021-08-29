@@ -16,8 +16,6 @@ header {
 }
 
 .navbar-brand {
-    /* padding: 50px auto 0; */
-    /* display: inline-block; */
     float: left;
     color: black;
 }
@@ -29,7 +27,7 @@ header {
 
 .navbar-nav .nav-item {
     list-style: none;
-    padding-right: 20px;
+    /* padding-right: 20px; */
     background-color: white;
     /* border: 1.5px solid black; */
     border-radius: 5px;
@@ -128,16 +126,61 @@ header {
     margin: 15px 0px 0px 5px;
 }
 
-.vegcategory {
-    width: 500px;
-    height: 300px;
-    float: left;
+
+/* category */
+
+.catg {
+    text-align: center;
 }
 
-.nonvegcategory {
-    width: 500px;
-    height: 300px;
-    float: right;
+.card-veg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    width: 18rem;
+    margin-left: 20%;
+}
+
+.card-img-top {
+    width: 50%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    margin-bottom: 0;
+    padding-left: 30%;
+}
+
+.card img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-body p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-nonveg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    margin-left: 60%;
 }
 
 
@@ -163,8 +206,12 @@ header {
     height: 100px;
 } */
 
-*/
-/* index page  */
+
+/* vegimage  */
+
+.cat1 {
+    margin: 200px;
+}
 
 .category {
     width: 400px;
@@ -175,11 +222,36 @@ header {
     border-radius: 10px;
 }
 
+.card {
+    box-shadow: 0 4px 8px;
+    transition: 0.38s;
+    border-radius: 5px;
+    margin-right: 100px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgha(red, green, blue, alpha);
+}
+
+.card img {
+    margin: 20px;
+    width: 80%;
+}
+
+.card button {
+    margin-left: 30px;
+    background-color: springgreen;
+    color: white;
+}
+
 
 /* about content */
 
 .aboutcontent {
     color: black;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 
@@ -193,6 +265,7 @@ form {
     border-radius: 4px;
     box-shadow: 0 0 2px #9D52C4;
     font-size: 18px;
+    padding-bottom: 2%;
 }
 
 form>input {
@@ -210,12 +283,12 @@ form>button {
     font-size: 15px;
     /* padding-right: 81%; */
     border: none;
-    padding: 1.5% 41%;
+    padding: 3% 41%;
     text-align: center;
 }
 
 .forgot-password {
-    margin-left: 40%;
+    margin-left: 30%;
 }
 
 
@@ -335,24 +408,76 @@ tr:nth-child(even) {
 
 /* vegimag horizontal align */
 
-.cat1 {
+.cat {
     margin-left: 95px;
     margin-top: 100px;
 }
 
-.product-container {
+.cat h2 {
+    text-align: center;
+    padding-right: 80px;
+}
+
+
+/* .product-container {
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 20px;
-}
+} */
 
 .product-box {
     border: 1px solid black;
     border-radius: 10px;
     margin: 20px;
+}
+
+
+/* .vegcategory {
+    width: 500px;
+    height: 300px;
+    padding-right: 100px;
+}
+
+.nonvegcategory {
+    width: 500px;
+    height: 300px;
+} */
+
+
+/*  */
+
+.productContainer {
+    margin-left: 150px;
+    margin-right: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 #888888;
+    transition: 0.8s;
+    width: 15%;
+    border-radius: 2px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 80%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card h4,
+p {
+    text-align: center;
+    padding: 4px;
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
 }
 
 

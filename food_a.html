@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_a.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <section class="add-food-section">
+
+            <form onsubmit="addFood();">
+                <h2>Add Food</h2>
+                <!-- <div class="row"> -->
+                <label for="catg">Category</label>
+                <input type="text" name="catg" id="catg" required autofocus>
+                <br />
+                <label for="name">Food Name</label>
+                <input type="text" name="name" id="name" required>
+                <br />
+
+                <label for="imageurl">Images</label>
+                <input type="number" name="imageurl" id="imageurl">
+                <br />
+
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" required>
+                <br />
+
+                <label for="qty">Quantity</label>
+                <input type="number" name="qty" id="qty" required>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <!-- </div> -->
+            </form><br><br>
+        </section>
+
+
+
+    </main>
+    <script src="jquery.js"></script>
+    <script src="foodservice.js"></script>
+    <script src="js/food_a.js"></script>
+    <script>
+        $("#header ").load("header.html ")
+    </script>
+
+
+</body>
+
+
+</html>
