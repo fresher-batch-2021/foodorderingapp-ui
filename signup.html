@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
 <body>
@@ -24,31 +25,34 @@
         <form onsubmit="register()">
 
             <label for="name">Name(*)</label>
-            <input type="text" name="name" id="name" placeholder="Enter the Name" required pattern="[A-Za-z ]{1,32}" title="autocomplete=" off " autofocus> 
-            
-        
-                <label for="email ">Email(*)</label>
-                <input type="email " name="email " id="email "placeholder="Enter the Email " required   autocomplete="off " title="Example mail id : example@example.com "  pattern="[a-z0-9._]+@[a-z]+\.[a-z]{2,3}$ "> <br>
-            
-                <label for="mobileNo ">Mobilenumber(*)</label>
-                <input type="tel " name="mobileNo " id="mobileNo "placeholder="Enter the mobilenumber " required  pattern="[6789][0-9]{9} " autocomplete="off " > <br/>
-           
-                <label for="password ">Password(*)</label>
-                <input type="password " name="password " id="password " placeholder="Enter the password "place required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} "
+            <input type="text" name="name" id="name" placeholder="Enter the Name" required pattern="[A-Za-z ]{1,32}" autocomplete="off" autofocus>
 
-                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters "> <br/>
-            
-               <label for="confirmpassword ">Confirmpassword(*)</label>
-                <input type="password " name="confirmpassword " id="confirmpassword " placeholder="Enter the confirmPassword "  > <br/>
-            
-            <button type="submit ">submit</button>
-            
-            </form>
-            </div>
-            <script src="jquery.js "></script>
-            
-            <script> $("#header ").load("header.html ") </script>
-            <script src="js/signup.js "></script>
-            <script src="userservice.js "></script>
-        </body>
-        </html>
+
+            <label for="email">Email(*)</label>
+            <input type="email" name="email" id="email" placeholder="Enter the Email" required pattern="[a-z0-9._]+@[a-z]+\.[a-z]{2,3}$" autocomplete="off" title="Example mail id : example@example.com"> <br>
+
+            <label for="mobileNo">Mobilenumber(*)</label>
+            <input type="tel" name="mobileNo" id="mobileNo" placeholder="Enter the mobilenumber" required pattern="[6789][0-9]{9}" autocomplete="off "> <br/>
+
+            <label for="password">Password(*)</label>
+            <input type="password" name="password" id="password" placeholder="Enter the password" place required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at
+            least 8 or more characters"> <br/>
+            <label for="confirmpassword">Confirmpassword(*)</label>
+            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Enter the confirmPassword"> <br/>
+
+            <button type="submit">submit</button>
+
+        </form>
+    </div>
+
+    <script src="jquery.js "></script>
+
+    <script>
+        $("#header ").load("header.html ")
+    </script>
+    <script src="js/signup.js "></script>
+
+    <script src="userservice.js "></script>
+</body>
+
+</html>

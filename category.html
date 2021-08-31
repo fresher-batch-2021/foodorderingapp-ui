@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Category</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
@@ -19,18 +19,28 @@
 
     <header id="header">
     </header>
-    <h2 class="subheading">Login Form</h2>
-    <div class="form-container">
-        <form onsubmit="login()">
-            <label for="email"> Email(*)</label><br>
-            <input type="email" id="email" name="email" required placeholder="Enter the email" autocomplete="off"><br>
-            <label for="password"> Password(*)</label><br>
-            <input type="password" id="password" name="password" required placeholder="Enter the password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"><br><br>
-            <button onclick="checklogin()">Login </button><br><br>
-
-            <a class="forgot-password" href="forgotpassword.html">Forgotpassword</a>
-        </form>
-    </div>
+    <section id="category-section">
+        <h2 class="catg">CATAGORIES</h2><br>
+    
+    
+        <div class="card-veg">
+            <img class=" card-img-top " src=" images/vegmanchurian.jpg" alt="Card image cap ">
+            <div class="card-body ">
+    
+                <p class="card-text ">veg-category</p>
+                <button class="card-btn" type="button"> <a href="veg.html">view</a></button>
+            </div>
+        </div>
+        <div class="card-nonveg ">
+            <img class="card-img-top " src="images/chickenmd.jpg" alt="Card image cap ">
+            <div class="card-body ">
+    
+                <p class="card-text ">Nonveg-category</p>
+                <button class="nonveg-btn" type="button "> <a href="nonveg.html">view</a></button>
+            </div>
+        </div>
+    </section>
+   
 
     <script src="jquery.js"></script>
     <script src="js/login.js"></script>

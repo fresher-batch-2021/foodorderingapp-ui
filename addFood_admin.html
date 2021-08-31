@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Food</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles_a.css">
+    <link rel="stylesheet" href="styles_admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
 
             <form onsubmit="addFood();">
                 <h2>Add Food</h2>
-                <!-- <div class="row"> -->
+
                 <label for="catg">Category</label>
                 <input type="text" name="catg" id="catg" required autofocus>
                 <br />
@@ -31,7 +31,7 @@
                 <br />
 
                 <label for="imageurl">Images</label>
-                <input type="number" name="imageurl" id="imageurl">
+                <input type="file" name="imageurl" id="imageurl">
                 <br />
 
                 <label for="price">Price</label>
@@ -41,9 +41,10 @@
                 <label for="qty">Quantity</label>
                 <input type="number" name="qty" id="qty" required>
 
-                <button type="submit">Submit</button>
+                <button type="submit">Submit</button><br>
+
                 <button type="reset">Reset</button>
-                <!-- </div> -->
+
             </form><br><br>
         </section>
 
@@ -52,7 +53,7 @@
     </main>
     <script src="jquery.js"></script>
     <script src="foodservice.js"></script>
-    <script src="js/food_a.js"></script>
+    <script src="js/addFood_admin.js"></script>
     <script>
         $("#header ").load("header.html ")
     </script>

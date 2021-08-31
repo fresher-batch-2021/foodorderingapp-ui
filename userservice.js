@@ -5,26 +5,31 @@ const url = "https://e212ecf3-82ab-4f31-b454-c3866556584d-bluemix.cloudantnosqld
 
 class userservice {
 
-    static login(email, password) {
+    static login(email, password)//loginpage
+     {
 
         const requestData = {
             selector: {
                 email: email,
                 password: password
+                
             },
-            fields: ["_id", "name", "email"],
+            fields: ["_id", "name", "email", "role"],
+
         };
         return axios.post(url, requestData, { headers: { Authorization: basicAuth } });
     }
 
-    static signUp(userobj) {
+    static signUp(userobj) //register page
+    {
 
         const url = "https://e212ecf3-82ab-4f31-b454-c3866556584d-bluemix.cloudantnosqldb.appdomain.cloud/foodorder_users";
         return axios.post(url, userobj, { headers: { 'Authorization': basicAuth } });
     }
 
 
-    static getUsers() {
+    static getUsers() //user list
+    {
 
         const url = "https://e212ecf3-82ab-4f31-b454-c3866556584d-bluemix.cloudantnosqldb.appdomain.cloud/foodorder_users/_all_docs?include_docs=true";
 

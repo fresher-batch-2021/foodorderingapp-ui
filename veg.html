@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width, initial-scale=1.0">
     <title>veg</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -19,56 +19,26 @@
 
 <body>
     <header id="header"></header>
-
     <section class="cat1">
-        <div class="card">
-            <img src="images/veg-biryani.jpg" alt="Avatar">
-            <div class="product-detail-container">
-                <h4><b>veg-biryani</b></h4>
-                <p>Rs.120</p>
-                <button><a href="addcart.html" class="add-cart-Button">Add to Cart</a></button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/veg rice.jpg" alt="Avatar">
-            <div class="product-detail-container">
-                <h4><b>Vegrice</b></h4>
-                <p>Rs.70</p>
-                <button><a href="addcart.html" class="add-cart-Button">Add to Cart</a></button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/vegburger.png" alt="Avatar">
-            <div class="product-detail-container">
-                <h4><b>vegburger</b></h4>
-                <p>Rs.175</p>
-                <button><a href="addcart.html" class="add-cart-Button">Add to Cart</a></button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/vegmeals.jpg" alt="Avatar">
-            <div class="product-detail-container">
-                <h4><b>vegmeals</b></h4>
-                <p>Rs.74</p>
-                <button><a href="addcart.html" class="add-cart-Button">Add to Cart</a></button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="images/vegpizza.jpg" alt="Avatar">
-            <div class="product-detail-container">
-                <h4><b>vegpizza</b></h4>
-                <p>Rs.170</p>
-                <button><a href="addcart.html" class="add-cart-Button">Add to Cart</a></button>
-            </div>
+        <div class="vegdiv1" id="vegcontainer">
+            <div id="producttable"></div>
+
         </div>
     </section>
+    </div>
+    
     <script src="jquery.js"></script>
     <script src="foodservice.js"></script>
-
-
+    <script src="js/search.js"></script>
+    <script src="js/veg.js"></script>
+    
+    
     <script>
         $("#header").load("header.html")
     </script>
 </body>
 
 </html>
+<style>
+
+</style>

@@ -1,3 +1,4 @@
+
 function logIn() {
     let login = JSON.parse(localStorage.getItem("logIn"));
     if (login == null || login == undefined) { login = false; }

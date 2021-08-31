@@ -54,3 +54,16 @@ td {
     text-align: center;
     margin: 5% auto;
 }
+
+
+/* listuser */
+
+.listFoodheader {
+    text-align: center;
+    margin-top: 10%;
+}
+.listFoodAdm {
+    margin-top: 1%;
+    margin-left: 20%;
+    border-collapse: collapse;
+}
