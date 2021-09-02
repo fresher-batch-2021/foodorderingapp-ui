@@ -1,4 +1,4 @@
-var slideIndex = 0;
+let slideIndex = 0;
         
         let slideData =["images/wallp2.jpg","images/dominos.jpg"];
 

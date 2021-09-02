@@ -23,14 +23,15 @@
 <body>
 
     <header id="header">
-        <!--append-->
+        
     </header>
     <main>
-        <h2>List Users</h2>
+    
 
         <section class="listFood">
          
                 <table class="listFoodAdm">
+                    <caption>List Users</caption>
                     <h2 class="listFoodheader">Users List </h2>
                     <thead>
                         <tr>
@@ -52,9 +53,14 @@
 
         </section>
     </main>
+    <script src="js/route.js"></script>
+
     <script src="jquery.js"></script>
-    <script src="userservice.js"></script>
+       <script src="userservice.js"></script>
     <script src="js/list_user_admin.js"></script>
+    <script>
+        $("#header").load("header-admin.html")
+    </script>
 
 </body>
 

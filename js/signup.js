@@ -23,13 +23,15 @@ function register() {
         userservice.signUp(userobj).then(res => {
             let data = res.data;
             console.log(data);
-            alert("successfully register");
-            window.location.href = "login.html";
+          toastr.success("successfully register");
+            setTimeout(() => {
+                window.location.href = "login.html";  
+            }, 3000);
 
         }).catch(err => {
             console.log(err.response.data);
             //  console.log(err.response.data);
-            alert("Unable to register" + err.message);
+          toastr.error("Unable to register" );
         });
 
 

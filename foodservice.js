@@ -26,5 +26,4 @@ class foodservice {
         const url = "https://e212ecf3-82ab-4f31-b454-c3866556584d-bluemix.cloudantnosqldb.appdomain.cloud/foodorder_veglist/_all_docs?include_docs=true";
         return axios.get(url, { headers: { 'Authorization': basicAuth } });
     }
-
 }

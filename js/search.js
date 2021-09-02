@@ -27,5 +27,7 @@ function searchFood() {
         console.log(productContent);
 
         document.querySelector("#vegcontainer").innerHTML=productContent;
+        // document.querySelector("#nonvegcontainer").innerHTML=productContent;
+
     });
 }

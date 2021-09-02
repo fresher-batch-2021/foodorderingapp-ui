@@ -17,20 +17,21 @@
     <header id="header"></header>
     <h2 class="subheading"> Order Form </h2>
     <form onsubmit="orderplaced()">
-        <label for="name"> customer name</label><br>
+        <label for="name"> Customer name</label><br>
         <input type="text" name="name" id="name" required placeholder="Enter the name" pattern="[A-Za-z ]{1,32}" autocomplete="off"><br>
-        <label for="phonenumber">contact number</label><br>
+        <label for="phonenumber">Contact number</label><br>
         <input type="tel" name="phonenumber" id="phonenumber" required placeholder="Enter the phonenumber" pattern="[6789][0-9]{9}" autocomplete="off"><br>
-        <label for="DeliveryDate">Deliverydate</label><br>
+        <label for="DeliveryDate">Delivery date</label><br>
         <input type="date" name="DeliveryDate" id="DeliveryDate" required placeholder="Enter the date" pattern="/^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/ " autocomplete="off"><br>
-        <label for="DeliveryTime">Deliverytimer</label><br>
+        <label for="DeliveryTime">Delivery timer</label><br>
         <input type="time" name="DeliveryTime" id="DeliveryTime" required placeholder="Enter the time" autocomplete="off"><br>
-        <label for="address">address</label><br>
+        <label for="address">Address</label><br>
         <input type="text" name="address" id="address" required placeholder="Enter the valid address" autocomplete="off"><br>
         <button type="submit"> orderplaced</a></button><br><br>
         <button type="button"> <a href="index.html">cancel </a></button>
     </form>
     <script src="jquery.js"></script>
+    <script src="js/route.js"></script>
     <script src="js/order.js"></script>
 
 

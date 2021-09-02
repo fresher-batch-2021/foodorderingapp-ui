@@ -39,8 +39,14 @@ function login() {
                 localStorage.setItem("LOGGED_IN_USER", JSON.stringify(user));
                 localStorage.setItem("logIn", JSON.stringify(true));
                 alert("login successfull");
-                window.location.href = "index.html";
-            }
+                
+if (user.role == "admin") {
+    window.location.href = "admin.html";
+} else {
+    window.location.href = "index.html";
+}
+                
+}
 
         }).catch(err => {
             console.log(err.response.data);
@@ -49,3 +55,4 @@ function login() {
         });
     }
 }
+
