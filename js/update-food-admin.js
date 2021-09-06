@@ -1,76 +1,50 @@
-let params = new URLSearchParams(window.location.search.substr(1));
-
-let _id = params.get("id");
-TaskService.getTasks(_id).then(res => {
-    let update = res.data;
-    console.log(update);
-
-
-    document.querySelector("#attendanceDate").value = update.attendanceDate;
-
-    document.querySelector("#taskName").value = update.name;
-
-
-    document.querySelector("#timeIn").value = update.inTime;
-
-    document.querySelector("#timeOut").value = update.outTime;
-
-    document.querySelector("#comments").value = update.comments;
-
-
-    document.querySelector("#_id").value = update._id;
-    document.querySelector("#_rev").value = update._rev;
-
-});
-
-function updateTask() {
-    alert("hai");
-    console.log("hai");
+function editFood() {
+    
     event.preventDefault();
-    const attendanceDate = document.querySelector("#attendanceDate").value;
-    const taskName = document.querySelector("#taskName").value;
+    const catg = document.querySelector("#catg").value;
+    const name = document.querySelector("#name").value;
+    const imageurl = document.querySelector("#imageurl").value;
+    const price = document.querySelector("#price").value;
+    const qty = document.querySelector("#qty").value;
 
+    console.log(catg + "+" + name + "+" + imageurl + price + "+" + qty);
 
-    const timeIn = document.querySelector("#timeIn").value;
-
-    const timeOut = document.querySelector("#timeOut").value;
-
-    const totalHours = SumHours();
-
-    const comments = document.querySelector("#comments").value;
-
-    const id = document.querySelector("#_id").value;
-    const rev = document.querySelector("#_rev").value;
-
-
-
-    let formValues = {
-        "_id": id,
-        "_rev": rev,
-        "attendanceDate": attendanceDate,
-        "timeIn": timeIn,
-        "timeOut": timeOut,
-        "comments": comments,
-        "totalHours": totalHours,
+    let foodObj = {
+        "catg": catg,
+        "name": name,
+        "imageurl": imageurl,
+        "price": price,
+        "qty": qty
     };
-
-    console.log(formValues);
-
-
-
-    TaskService.updateTask(formValues).then(res => {
-        let users = res.data;
-        // localStorage.setItem("register_in_users",JSON.stringify(users));
-        alert("Update successful");
-        window.location.href = "timesheet_record.html";
-    }).catch(err => {
-        console.log(err.response.data);
-        alert("update failed");
+    
+    
+    Product() 
+    {
+        foodService.getProduct(id).then(res => {
+          
+          
+         let product = res;
+         foodObj. patchValue(product);
+          
+          console.log(res);
+        });
+      }
+      try
+      {
+foodservice.updateProduct(orderObj).then(res=>
+   
+   {
+       let data=res.data.doc;
+       console.log(data);
+       
+   } ).catch (res=>
+    {
+        console.error(err);
     });
-
-
-
-
-
-
+      }
+      catch(err)
+      {
+console.error(err);
+      }
+    
 }

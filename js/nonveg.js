@@ -1,13 +1,11 @@
+function nonveglist(){
 let content = "";
-var count = 0;
+let count = 0;
+foodservice.nonveglist().then(res => {
+    let data = res.data.rows;
+    let images = data.map(obj => obj.doc);
 
-const dbUsername = "apikey-v2-1zxymrqa2rwcwp3esoqslwcsrnsvh2ggpy6jmusqnlz9";
-const dbPassword = "8db4bc5abe318da5e50e638f8cb126b5";
-const basicAuth = "Basic " + btoa(dbUsername + ':' + dbPassword);
-const url = "https://e212ecf3-82ab-4f31-b454-c3866556584d-bluemix.cloudantnosqldb.appdomain.cloud/nonveglist/_all_docs?include_docs=true";
-axios.get(url, { headers: { Authorization: basicAuth } }).then(res => {
-        let data = res.data.rows;
-        let images = data.map(obj => obj.doc);
+        
 
 
         console.log(images);
@@ -16,7 +14,7 @@ axios.get(url, { headers: { Authorization: basicAuth } }).then(res => {
 
             content = content + `
           <div class="card">
-          <img class = "veg-div2" src="images/${img.imageUrl}" alt="veg-biryani">
+          <img src="images/${img.imageUrl}" alt="veg-biryani">
              <div class="product-detail-container">
                   <h4><b>${img.name}</b></h4>
                   <p>₹${img.price}.00</p>
@@ -26,16 +24,18 @@ axios.get(url, { headers: { Authorization: basicAuth } }).then(res => {
 
 
             count = count + 1;
-            if (count == 2) {
+            if (count == 4) {
                 content = content + `<br>`;
                 count = 0;
             }
         }
 
-        document.querySelector("#nonvegcontainer").innerHTML = content;
+        document.querySelector("#vegcontainer").innerHTML = content;
     })
     .catch((err) => {
         console.log(err.response.data);
         alert("Register failed");
 
-    });
+    })
+}
+nonveglist();

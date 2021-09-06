@@ -24,7 +24,7 @@ function listData() {
             <td>   ${foodList.name} </td> 
             <td>   <img src="images/${foodList.imageUrl}" alt="food image"  >  </td> 
             <td>   ${foodList.price }</td> 
-            <td>   ${foodList.qty }</td><td><input type="button" id="deleteButton" value="Delete" onclick="deleteRow('${foodList._id}', '${foodList._rev}')" />&ensp;<button><a href='update-food-admin.html?id=${food_list._id}' style="text-decoration:none;">Edit</a></button></td>
+            <td>   ${foodList.Quantity }</td><td><input type="button" id="deleteButton" value="Delete" onclick="deleteRow('${foodList._id}', '${foodList._rev}')" />&ensp;<button><a href='update-food-admin.html?id=${food_list._id}' style="text-decoration:none;">Edit</a></button></td>
             
             </tr>`;
 
@@ -45,8 +45,9 @@ listData();
 
 
 function deleteRow(id, rev) {
-    alert(id);
-    alert("Do you want to delete this data?");
+    let cfm = confirm("Do you want to cancel your Order ?");
+        if (cfm) {
+
     const dbUsername = "apikey-v2-1zxymrqa2rwcwp3esoqslwcsrnsvh2ggpy6jmusqnlz9";
     const dbPassword = "8db4bc5abe318da5e50e638f8cb126b5";
     const basicAuth = "Basic " + btoa(dbUsername + ":" + dbPassword);
@@ -55,10 +56,11 @@ function deleteRow(id, rev) {
 
     console.log(url);
     axios.delete(url, { headers: { 'Authorization': basicAuth } }).then(res => {
-        alert("deleted succesfully");
+        
         window.location.href = "food_list_Admin.html";
     }).catch(err => {
-        alert("error in deleting");
+        console.log(err);
     });
 
-}
+        }
+    }

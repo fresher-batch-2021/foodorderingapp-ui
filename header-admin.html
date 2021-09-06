@@ -38,7 +38,7 @@
         let user = userStr != null ? JSON.parse(userStr) : null;
         if (user != undefined || user != null) {
 
-            document.querySelector("#loggedIn").innerHTML = "Welcome <a href = 'profile.html'>" + user.name + "</a>  &nbsp;<a href='#' onclick='AdminLogout()'> Logout</a>";
+            document.querySelector("#loggedIn").innerHTML = "Welcome <a href = 'profile.html' class='welcome'>" + user.name + "</a>  &nbsp;<a href='#' onclick='AdminLogout()'> Logout</a>";
         }
 
 

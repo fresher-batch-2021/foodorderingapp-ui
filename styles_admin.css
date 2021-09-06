@@ -33,7 +33,6 @@ body {
 
 #page>footer {
     grid-area: foot;
-    /* background-color: #363636; */
     border-radius: 1%
 }
 
@@ -52,7 +51,7 @@ body {
 
 .nav-item {
     list-style: none;
-    padding-right: 20px;
+
     background-color: #fff;
     border: 1.5px solid #FFF;
     border-radius: 5px;
@@ -132,7 +131,13 @@ td {
     margin-top: 10%;
     margin-left: 15%;
     border-collapse: collapse;
+    margin: 10%;
 }
+.showImg {
+    width: 40%;
+
+}
+
 
 .add-food-section {
     margin-top: 10%;
@@ -185,3 +190,11 @@ td {
     margin-left: 20%;
     border-collapse: collapse;
 }
+/* --------welcome--------- */
+.welcome {
+    
+    color: black;
+    margin-top: 100px;
+
+} 
+

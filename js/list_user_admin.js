@@ -2,7 +2,7 @@ $("#header").load("header.html");
 
 function listData() {
 
-    var content = "";
+    let content = "";
 
     userservice.getUsers().then(res => {
         let data = res.data.rows;

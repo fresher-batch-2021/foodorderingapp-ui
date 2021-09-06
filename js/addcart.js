@@ -92,7 +92,7 @@ function addtocart() {
         sum = sum + total;
         console.log(sum);
     }
-    let end = `<tr><td></td><td rowspan="5" class="totalRow" >total</td><td rowspan="5">${sum}</td></tr></table>
+    let end = `<tr><td></td><td colspan="3" class="totalRow" >total</td><td rowspan="5">${sum}</td></tr></table>
   `;
     localStorage.setItem("totalAmount", sum);
     content = itemList + end;
@@ -107,7 +107,11 @@ function addtocart() {
 }
 
 function deleteCartData(index) {
-    var arr = JSON.parse(localStorage.getItem("productList"));
+    let cfm = confirm("Do you want to cancel your Order ?");
+        if (cfm) {
+
+
+    let arr = JSON.parse(localStorage.getItem("productList"));
 
     if (arr[index].Quantity > 1) {
 
@@ -118,8 +122,9 @@ function deleteCartData(index) {
     console.log(arr[index]);
     localStorage.setItem("PRODUCTS", JSON.stringify(arr));
     window.location.href = "addcart.html";
-    alert("Do You want to remove this item from cart");
+    
     // addtocart();
+}
 }
 
 function cartCheck() {

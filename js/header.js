@@ -8,7 +8,7 @@ function logIn() {
     } else {
         content = `<a class="navlink" href="login.html"> Login</a>`;
     }
-    document.querySelector("#navlinks").innerHTML = content;
+    document.querySelector("#navlinks").innerHTML= content;
 }
 
 function checkLogin() {

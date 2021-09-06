@@ -18,11 +18,11 @@ function displayOrderItems() {
     let end = ` </tbody></table>`;
     alert("hari");
     console.log(displayOrderItems);
-    var count = 1;
+    let count = 1;
     let sum = 0;
     let total = 0;
     for (let item of orderItem) {
-        alert("sarath");
+        
 
         total = item.Quantity * item.price;
         content = content + `

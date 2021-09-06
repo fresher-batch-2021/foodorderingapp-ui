@@ -20,7 +20,7 @@
     <main>
         <section class="add-food-section">
 
-            <form onsubmit="addFood();">
+            <form onsubmit="updateFood()">
                 <h2>Update Food</h2>
 
                 <label for="catg">Category</label>
@@ -35,11 +35,11 @@
                 <br />
 
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" required>
+                <input type="text" name="price" id="price" required>
                 <br />
 
                 <label for="qty">Quantity</label>
-                <input type="number" name="qty" id="qty" required>
+                <input type="text" name="qty" id="qty" required>
 
                 <button type="submit">Submit</button><br>
 
@@ -51,11 +51,11 @@
 
 
     </main>
-    <script src="jquery.js"></script>
-    <!-- <script src="foodservice.js"></script> -->
-    <script src="js/update-food-admin.js"></script>
+    <script src="/js/jquery.js"></script>
+     <script src="/js/foodservice.js"></script> -->
+    <script src="/js/update-food-admin.js"></script>
     <script>
-        $("#header ").load("header.html ")
+        $("#header ").load("header-admin.html ")
     </script>
 
 

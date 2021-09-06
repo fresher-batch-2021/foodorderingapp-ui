@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>order</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header id="header"></header>
     <h2 class="subheading"> Order Form </h2>
-    <form onsubmit="orderplaced()">
+    <form onsubmit="orderNow()">
         <label for="name"> Customer name</label><br>
         <input type="text" name="name" id="name" required placeholder="Enter the name" pattern="[A-Za-z ]{1,32}" autocomplete="off"><br>
         <label for="phonenumber">Contact number</label><br>
@@ -30,9 +33,29 @@
         <button type="submit"> orderplaced</a></button><br><br>
         <button type="button"> <a href="index.html">cancel </a></button>
     </form>
-    <script src="jquery.js"></script>
+    
+    <script src="js/jquery.js"></script>
     <script src="js/route.js"></script>
     <script src="js/order.js"></script>
+    <script src="js/foodservice.js"></script>
+    <script>
+        $(function () {
+    let dtToday = new Date();
+
+    let month = dtToday.getMonth() + 1;
+    let day = dtToday.getDate();
+    let year = dtToday.getFullYear();
+    if (month < 10)
+        month = '0' + month.toString();
+    if (day < 10)
+        day = '0' + day.toString();
+
+    let minDate = year + '-' + month + '-' + day;
+
+    $('#date').attr('min', minDate);
+});
+
+    </script>
 
 
 
