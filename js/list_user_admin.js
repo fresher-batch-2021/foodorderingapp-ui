@@ -17,7 +17,7 @@ function listData() {
 
 
 
-            content = content + "<tr><td>" + i + "</td>" + "<td>" + listUser.email + "</td>" + "<td>" + listUser.name + "</td>" + "<td>" + listUser.role + "</td>" + "<td>" + listUser.mobileNo + "</td></tr>";
+            content = content + "<tr><td>" + i + "</td>" + "<td>" + listUser.email + "</td>" + "<td>" + listUser.name + "</td>" + "<td>"  + listUser.mobileNo + "</td></tr>";
 
 
             document.querySelector("#listUserDataAdm").innerHTML = content;

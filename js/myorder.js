@@ -18,12 +18,11 @@
             itemList += '</ul>'
 
             content = content + `<tr>
-            <td >   ${i} </td>  
+           
             <td>   ${productobj.name} </td>
             <td>   ${productobj.phonenumber} </td> 
             <td>   ${itemList} </td> 
-            <td>   ${productobj.TodayDate} </td> 
-            <td>   ${productobj.date} </td> 
+            
             <td>   ${productobj.address} </td>
             <td>   ${productobj.status} </td> 
             <td>   ${productobj.totalAmount} </td> 
@@ -37,3 +36,21 @@
 
 }
 myOrder();
+function cancelOrdered(id)
+{
+    foodservice.getProduct(id).then(res=>
+        {
+            let productObj=res.data;
+            productObj.status="CANCELLED";
+            foodservice.cancelOrder(id,orderObj)
+            .then(res=>
+                {
+                    alert("hema");
+                    window.location.reload();
+                }).catch(err=>
+                    {
+                        alert("order can't not be cancelled")
+                        console.log(err);
+                    });
+        });
+}

@@ -131,10 +131,10 @@ td {
     margin-top: 10%;
     margin-left: 15%;
     border-collapse: collapse;
-    margin: 10%;
+
 }
-.showImg {
-    width: 40%;
+.foodList-img{
+    width: 30%;
 
 }
 
@@ -183,13 +183,19 @@ td {
 
 .listFoodheader {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 15%;
+    font-size: 20px;
 }
 .listFoodAdm {
-    margin-top: 1%;
-    margin-left: 20%;
+    margin-top: 5%;
+    margin-left: 25%;
     border-collapse: collapse;
+
 }
+.listFoodAdm th,td{
+    margin-top: 50%;
+}
+
 /* --------welcome--------- */
 .welcome {
     

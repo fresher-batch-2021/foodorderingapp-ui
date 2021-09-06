@@ -6,16 +6,10 @@ $("#header").load("header.html");
 
 function orderNow() {
     event.preventDefault();
-    let today = new Date();
-    let dd = String(today.getDate()).padStart(2, '0');
-    let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    let yyyy = today.getFullYear();
-    today = dd + '-' + mm + '-' + yyyy;
-    console.log(today);
     let total = localStorage.getItem("totalAmount");
     const name = document.querySelector("#name").value;
     const phonenumber = document.querySelector("#phonenumber").value;
-    const DeliveryDate = document.querySelector("#DeliveryDate").value;
+    const DeliveryDate = document.querySelector("#date").value;
     const DeliveryTime = document.querySelector("#DeliveryTime").value;
     const address = document.querySelector("#address").value;
     let product = JSON.parse(localStorage.getItem("PRODUCTS"));
@@ -38,7 +32,7 @@ function orderNow() {
         let orderNow = {
             name: name,
             phonenumber: phonenumber,
-            TodayDate: today,
+
             date: date,
             address: address,
             status: "ORDERED",

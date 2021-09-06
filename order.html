@@ -17,15 +17,15 @@
 </head>
 
 <body>
-    <header id="header"></header>
+    <header id="header"></header>   
     <h2 class="subheading"> Order Form </h2>
     <form onsubmit="orderNow()">
         <label for="name"> Customer name</label><br>
         <input type="text" name="name" id="name" required placeholder="Enter the name" pattern="[A-Za-z ]{1,32}" autocomplete="off"><br>
         <label for="phonenumber">Contact number</label><br>
         <input type="tel" name="phonenumber" id="phonenumber" required placeholder="Enter the phonenumber" pattern="[6789][0-9]{9}" autocomplete="off"><br>
-        <label for="DeliveryDate">Delivery date</label><br>
-        <input type="date" name="DeliveryDate" id="DeliveryDate" required placeholder="Enter the date" pattern="/^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/ " autocomplete="off"><br>
+        <label for="date">Delivery date</label><br>
+        <input type="date" name="date" id="date" required placeholder="Enter the date" pattern="/^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/ " autocomplete="off"><br>
         <label for="DeliveryTime">Delivery timer</label><br>
         <input type="time" name="DeliveryTime" id="DeliveryTime" required placeholder="Enter the time" autocomplete="off"><br>
         <label for="address">Address</label><br>
@@ -39,21 +39,21 @@
     <script src="js/order.js"></script>
     <script src="js/foodservice.js"></script>
     <script>
-        $(function () {
-    let dtToday = new Date();
+       $(function () {
+            var dtToday = new Date();
 
-    let month = dtToday.getMonth() + 1;
-    let day = dtToday.getDate();
-    let year = dtToday.getFullYear();
-    if (month < 10)
-        month = '0' + month.toString();
-    if (day < 10)
-        day = '0' + day.toString();
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if (month < 10)
+                month = '0' + month.toString();
+            if (day < 10)
+                day = '0' + day.toString();
 
-    let minDate = year + '-' + month + '-' + day;
+            var minDate = year + '-' + month + '-' + day;
 
-    $('#date').attr('min', minDate);
-});
+            $('#date').attr('min', minDate);
+        });
 
     </script>
 
