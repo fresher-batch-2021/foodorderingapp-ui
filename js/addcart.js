@@ -1,20 +1,21 @@
 $("#header").load("header.html");
 let products = {}; //inistialize json array
 
-function getAllProducts() {
+function getAllProducts() 
+{
     let products = JSON.parse(localStorage.getItem("PRODUCTS")) || [];
-    // alert(products);
     return products;
-
 }
 
-function addProducts(product) {
+function addProducts(product) 
+{
     let products = this.getAllProducts();
     products.push(product);
     localStorage.setItem("PRODUCTS", JSON.stringify(products));
 }
 
-function addProductToLs() {
+function addProductToLs() 
+{
     console.log(window.location.search.substr(1));
     const params = new URLSearchParams(window.location.search.substr(1));
     if (params.has("foodname")) {
@@ -28,51 +29,40 @@ function addProductToLs() {
 
         console.log("product", pro);
         console.log("price", price);
-
-        // addProducts(product);
-
         toCart(product);
     }
 }
 addProductToLs();
 
-function toCart(product) {
+function toCart(product) 
+{
 
     let cartItemsStr = localStorage.getItem("PRODUCTS");
     let cartItems = cartItemsStr != null ? JSON.parse(cartItemsStr) : [];
     console.log(cartItems);
-    // If item already exist, update the quantity
     let index = cartItems.findIndex(cartItems => cartItems.foodname == product.foodname);
-    // alert(index);
     console.log(index);
+
     if (index != -1) {
         let cartObj = cartItems[index];
         console.log("before ", cartObj);
-        // localStorage.setItem("PRODUCTS",JSON.stringify(cartItems));
-        // console.log(cartObj[2].Quantity);
-        // if(cartObj.Quantity === 0)
-        // {
-        //   cartObj.Quantity=1;
-        //   console.log(cartObj.Quantity);
-        // }
-        // else
-        // {
         cartObj.Quantity++;
         cartItems[index] = cartObj;
         console.log("After", cartObj);
         localStorage.setItem("PRODUCTS", JSON.stringify(cartItems));
 
-    } else {
+    } 
+    else
+    {
         addProducts(product);
     }
-    // let products = this.getAllProducts();
-    // products.push(product);
-    // localStorage.setItem("PRODUCTS",JSON.stringify(cartItems));
+
 }
 let productList = getAllProducts();
 addtocart();
 
-function addtocart() {
+function addtocart()
+ {
     let itemList = "";
     let total = 0;
     let count = 1;
@@ -92,12 +82,11 @@ function addtocart() {
         sum = sum + total;
         console.log(sum);
     }
-    let end = `<tr><td></td><td colspan="3" class="totalRow" >total</td><td rowspan="5">${sum}</td></tr></table>
+    let end = `<tr class="totalRow"><td colspan="4" class="net-amount" >Net Amount :</td><td colspan="2">${sum}</td></tr></table>
   `;
     localStorage.setItem("totalAmount", sum);
     content = itemList + end;
-    // var sumValue = parseFloat(sum);
-    // console.log(sumValue);
+    
 
     document.querySelector("#cart-table").innerHTML = content;
 
@@ -106,7 +95,8 @@ function addtocart() {
 
 }
 
-function deleteCartData(index) {
+function deleteCartData(index) 
+{
     let cfm = confirm("Do you want to cancel your Order ?");
         if (cfm) {
 
@@ -127,7 +117,8 @@ function deleteCartData(index) {
 }
 }
 
-function cartCheck() {
+function cartCheck() 
+{
     let cartItem = JSON.parse(localStorage.getItem("PRODUCTS"));
     if (cartItem == null || cartItem == "") {
         alert("cant order when cart is empty ");

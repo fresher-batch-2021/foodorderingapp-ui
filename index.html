@@ -6,14 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Food Order</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 
 
 </head>
@@ -21,12 +15,36 @@
 <body>
 
     <header id="header"></header>
-    <div id="producttable"></div>
+       <div id="producttable"></div>
     <div class="slideshow_container"></div>
     <hr>
-    <h2 class="catg">CATEGORIES</h2><br>
 
 
+<section class="icon-page">
+        <h2>How its works</h2><br>
+        <p> Get your favourite food in 4 simple steps</p><br><br>
+    <div class="searchicon-img">
+        <img class="icon-img"src="images/searchicon - Copy.png" alt="search">
+        <button>Search</button>
+    </div>
+      <div class="chooseicon-img">
+        <img class="icon-img"src="images/chooseicon.png" alt="choose">
+        <button>Choose</button>
+    </div>
+    <div class="payicon-img">
+        <img class="icon-img" src="images/payicon - Copy.png" alt="pay">
+        <button>Pay</button>    
+    </div>
+    </div class="enjoyicon-img">
+        <img class="icon-img" src="images/enjoyicon - Copy.png" alt="enjoy">
+        <button>Enjoy</button>
+    </div>
+</section>
+
+
+
+    <!-- '<h2 class="catg">CATEGORIES</h2><br>
+    <div class="card-container">
     <div class="card-veg">
         <img class=" card-img-top " src=" images/vegmanchurian.jpg" alt="Card image cap ">
         <div class="card-body ">
@@ -41,22 +59,22 @@
 
             <p class="card-text ">Nonveg-category</p>
             <button class="nonveg-btn" type="button "> <a href="nonveg.html">view</a></button>
-        </div>
+        </div> 
     </div>
+</div> 
+
+     <footer id="footer"></footer> -->
 
 
-
-
-    </div>
-    </section>
-    <script src="js/jquery.js"></script>
-    <!-- <script src="js/route.js"></script> -->
+    <script src="/js/jquery.js"></script>
+    <script src="js/route.js"></script>
     <script src="js/foodservice.js"></script>
     <script src="js/search.js"></script>
     <script src="js/slider.js "></script>
+    
         <script>
-        $("#header ").load("header.html ")
-        $("#footer ").load("footer.html ")
+        $("#header").load("header.html")
+        // $("#footer").load("footer.html")
     </script>
 
 </body>

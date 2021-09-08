@@ -18,7 +18,7 @@
             itemList += '</ul>'
 
             content = content + `<tr>
-           
+            <td>${i} </td>
             <td>   ${productobj.name} </td>
             <td>   ${productobj.phonenumber} </td> 
             <td>   ${itemList} </td> 
@@ -45,7 +45,7 @@ function cancelOrdered(id)
             foodservice.cancelOrder(id,orderObj)
             .then(res=>
                 {
-                    alert("hema");
+        
                     window.location.reload();
                 }).catch(err=>
                     {

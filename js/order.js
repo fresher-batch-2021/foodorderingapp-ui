@@ -1,9 +1,4 @@
 $("#header").load("header.html");
-
-
-
-
-
 function orderNow() {
     event.preventDefault();
     let total = localStorage.getItem("totalAmount");
@@ -15,7 +10,7 @@ function orderNow() {
     let product = JSON.parse(localStorage.getItem("PRODUCTS"));
     let user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
     let loggedInEmail = user != null ? user.email : null;
-    try {
+    try { 
         
         if (name == "" || name == null || name.trim() == "") {
             alert("Name cannot be blank");

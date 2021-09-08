@@ -32,9 +32,6 @@ function listData() {
         }
         document.querySelector("#listFoodDataAdm").innerHTML = content;
 
-        // return content;
-
-        // window.location.href="list.html";
     }).catch(err => {
         console.log(err.response.data);
         alert("List failed");
