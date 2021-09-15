@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/enjoyicon - Copy.png">
 </head>
 
 <body>
-    <header id="header"></header>   
+    <header id="header"></header>  
+   
     <h2 class="subheading"> Order Form </h2>
     <form onsubmit="orderNow()">
         <label for="name"> Customer name</label><br>
@@ -25,13 +27,21 @@
         <input type="date" name="date" id="date" required placeholder="Enter the date" pattern="/^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/ " autocomplete="off"><br>
         <label for="DeliveryTime">Delivery timer</label><br>
         <input type="time" name="DeliveryTime" id="DeliveryTime" required placeholder="Enter the time" autocomplete="off"><br>
-        <label for="address">Address</label><br>
+       <label for="address">Address</label><br>
         <input type="text" name="address" id="address" required placeholder="Enter the valid address" autocomplete="off"><br>
-        <button class="place-order-btn" type="submit"> PlaceOrder</a></button><br><br>
-        <button class="cancel-btn" type="button"> <a href="index.html">cancel </a></button>
+        <label for="totalAmount">Total Amount</label><br>
+        <input type="text" name="totalAmount" id="totalAmount" required placeholder="Enter Total Amount" autocomplete="off"><br>
+        <label >Select Payment</label>
+        <select name="payment" id="payment" required>
+            <option>Cash on Delivery</option>
+        </select>
+        <button class="place-order-btn" type="submit"><a href="myorder.html"> Place Order</a></button><br>
+        <button class="cancel-btn" type="button"> <a href="index.html">Cancel </a></button>
     </form>
-    
+    <div class="footer-section"></div>
+    <footer id="footer"></footer> 
     <script src="js/jquery.js"></script>
+    <script src="js/cart-service.js"></script>
     <script src="js/route.js"></script>
     <script src="js/order.js"></script>
     <script src="js/foodservice.js"></script>
@@ -51,7 +61,11 @@
 
             $('#date').attr('min', minDate);
         });
-
+        </script>
+        <script>
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        
     </script>
 
 

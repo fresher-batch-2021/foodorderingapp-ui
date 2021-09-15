@@ -1,4 +1,4 @@
-$("#header").load("header.html");
+
 function orderNow() {
     event.preventDefault();
     let total = localStorage.getItem("totalAmount");
@@ -7,6 +7,7 @@ function orderNow() {
     const DeliveryDate = document.querySelector("#date").value;
     const DeliveryTime = document.querySelector("#DeliveryTime").value;
     const address = document.querySelector("#address").value;
+    const totalAmount = document.querySelector("#totalAmount").value;    
     let product = JSON.parse(localStorage.getItem("PRODUCTS"));
     let user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
     let loggedInEmail = user != null ? user.email : null;
@@ -27,11 +28,10 @@ function orderNow() {
         let orderNow = {
             name: name,
             phonenumber: phonenumber,
-
             date: date,
             address: address,
             status: "ORDERED",
-            totalAmount: total,
+            totalAmount: totalAmount,
             Payment: "Cash On Delivery",
             productDetails: product,
             email: loggedInEmail
@@ -52,3 +52,12 @@ function orderNow() {
         alert(err.message);
     }
 }
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+
+    //set total amount in textbox value
+    document.querySelector("#totalAmount").value=BillCalculator.getTotalAmount();
+}
+
+);

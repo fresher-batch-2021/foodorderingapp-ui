@@ -1,4 +1,4 @@
-$("#header").load("header.html");
+
 let products = {}; //inistialize json array
 
 function getAllProducts() 

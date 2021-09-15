@@ -8,62 +8,140 @@
     <title>Food Order</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <link rel="icon" href="images/enjoyicon - Copy.png">
 
 </head>
 
-<body>
+<body class="index-page">
 
     <header id="header"></header>
-       <div id="producttable"></div>
-    <div class="slideshow_container"></div>
-    <hr>
+    <div id="producttable"></div>
+
+
+
+    <div class="video-background">
+        <div class="video-foreground">
+            <div class="show-for-small-only"><div class="vid-img">
+
+            </div></div>
+        <div class="hide-for-small-only">
+          <video class="sleep-video1" loop autoplay muted >
+              <source src="images/foodvideo1.mp4" type="video/mp4">
+            </video>
+         </div>  
+        </div>
+      </div>
+    
 
 
 <section class="icon-page">
         <h2>How its works</h2><br>
         <p> Get your favourite food in 4 simple steps</p><br><br>
-    <div class="searchicon-img">
+   <div class="how-it-works-section">
+        <div class="icon-img-section">
         <img class="icon-img"src="images/searchicon - Copy.png" alt="search">
-        <button>Search</button>
+       <h3>Search</h3>
+       <p>Find all restaurants available near you</p>
     </div>
-      <div class="chooseicon-img">
+      <div class="icon-img-section">
         <img class="icon-img"src="images/chooseicon.png" alt="choose">
-        <button>Choose</button>
+       <h3>Choose</h3>
+       <p>Browse hundreds of menus to find the food you like
+
+    </p>
     </div>
-    <div class="payicon-img">
+    <div class="icon-img-section">
         <img class="icon-img" src="images/payicon - Copy.png" alt="pay">
-        <button>Pay</button>    
+        <h3>Pay</h3>  
+        <p>It's quick, secure and easy</p>  
     </div>
-    </div class="enjoyicon-img">
+    <div class="icon-img-section">
         <img class="icon-img" src="images/enjoyicon - Copy.png" alt="enjoy">
-        <button>Enjoy</button>
+        <h3>Enjoy</h3>
+        <p>Food is prepared & delivered to your door</p>
+    
+</div>
+</div>
+</section>
+
+<section class="card-section">
+    <div class="card-index">
+    
+     <h1>Food Categories</h1>
+
+  <div class="card-category" >
+    <a href="veg.html" > <img src="images/vegeterianimg.jpg" alt="veg">
+    <div class="card-container">
+    <button><p>VEG </p></button>
+    </div></a>
+</div>
+
+ 
+    <div class="card-category">
+       <a href="nonveg.html"> <img src="images/nonvegeterianimg.jpg" alt="nonveg">
+        <div class="card-container">
+        <button><p>NON-VEG </p></button>
+        </div></a>
+
+
     </div>
+</div>
 </section>
 
 
 
-    <!-- '<h2 class="catg">CATEGORIES</h2><br>
-    <div class="card-container">
-    <div class="card-veg">
-        <img class=" card-img-top " src=" images/vegmanchurian.jpg" alt="Card image cap ">
-        <div class="card-body ">
 
-            <p class="card-text ">veg-category</p>
-            <button class="card-btn" type="button"> <a href="veg.html">view</a></button>
-        </div>
+<section class="banner">
+    <img src="images/banner1.jpg" alt="offerpage">
+
+    <img src="images/banner2.jpg" alt="offerpage">
+</section>
+
+
+
+<section class="download-section">
+<div class="download-image">
+    <img src="images/expresseatslogo.png" alt="expresseats">
     </div>
-    <div class="card-nonveg ">
-        <img class="card-img-top " src="images/chickenmd.jpg" alt="Card image cap ">
-        <div class="card-body ">
+    <div class="download-content">
+    <h1>Order Food With Our Android & i Phone App</h1>
+  <h3>Convenient Payment Options Available </h3>
+    <p> 
+        Make your food order at your ease with our user friendly mobile apps available in Android and i Phone App. Jusfood mobile app also makes your online food ordering more fun with its timely offers and discounts.
+    </p>
+    <p>
+        Jusfood massive apps that you can use to quickly and securely get your favourite food delivered to your doorstep with the help of your smartphone.
+      </p>
+      <p>  
+        Terms and Conditions Apply
+    </p>     
+       
+</div>
+</section>
 
-            <p class="card-text ">Nonveg-category</p>
-            <button class="nonveg-btn" type="button "> <a href="nonveg.html">view</a></button>
-        </div> 
-    </div>
-</div> 
+<section>
+ <div>
 
-     <footer id="footer"></footer> -->
+
+ </div>
+</section>
+
+
+     
+
+
+ 
+
+
+
+
+
+
+
+    
+ <div class="footer-section"></div>
+
+     <footer id="footer"></footer>
 
 
     <script src="/js/jquery.js"></script>
@@ -73,8 +151,8 @@
     <script src="js/slider.js "></script>
     
         <script>
-        $("#header").load("header.html")
-        // $("#footer").load("footer.html")
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
     </script>
 
 </body>

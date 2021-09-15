@@ -2,12 +2,18 @@
 
 * {
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Calibri', 'Trebuchet MS', sans-serif;
 }
-
+body
+{
+    background-color: #F5E4FF;
+}
+.index-page{
+    background-color:#FFFFFF;
+}
 header {
     width: 100%;
-   background-color: #FFFFFF; 
+    background-color: #FFFFFF; 
     position: fixed;
     top: 0;
    color: black; 
@@ -41,6 +47,7 @@ header {
     text-decoration: none;
     font-size: 20px;
     color: black;
+
 }
 
 .navbar-nav {
@@ -61,6 +68,8 @@ header {
     text-decoration: none;
     font-size: 20px;
     color: black;
+    cursor: pointer;
+
 }
 
 .navbar-itembtn1 {
@@ -85,234 +94,208 @@ header {
     display: inline;
      margin-left: 10%;
     padding: 20px 30px;
-
-    
-
 }
 
 .searchContainer img {
     position: absolute;
     right: 12%;
     top: 38%;
-   
-   
-}
+   }
 
 .searchContainer input[type=text] {
     text-align: center;
-    padding: 10px 70px;
+    padding: 5px 50px;
     border-radius: 7px;
-    border: 2px solid black;
-    
+    border: 1px solid #9D53C4;
+    font-size: 20px;
     
 }
 .searchbar{
     width: 6%;
  }
- 
+ /* ------------foodvideo------------------ */
+.sleep-video1{
+
+    min-width: 100%; 
+    min-height: 90%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}
 
 
-/*--------------- slider----------------- */
 
-.slideshow_container 
-{
-    
-    max-width: 100%;
-    
-    }
- .slideshow_container img
-  {
-    height: 100%;
-    width: 100%;
-    
-} 
 /*---------- how it work section------------- */
 .icon-page{
-    background-color: thistle;
-    
+    padding-bottom: 1%;
+    padding-top:2%;
+background-color: #9D53C4;
+color: white;
+
+
 }
-.icon-page h2{
+.icon-page h2,.icon-page h3,.icon-page p{
     text-align: center;
 }
-.searchicon-img{
-    float: left;
-    margin-left: 25%;
-    margin-bottom: 10%;
-    
-
-}
-.searchicon-img button{
-    margin-left: 40%;
-    padding: 2%;
-    
-}
-.chooseicon-img{
-    float: left;
-    margin-left: 2%;
-    }
-.chooseicon-img  button{
-    margin-right: 2%;
-
+.how-it-works-section{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
 }
 
- 
-.payicon-img{
-    float: left;
-    margin-left: 5%;
-    margin-right: 5%;
+ .icon-img-section{
+    flex: 25%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-left: 3%;
+
 }
-.payicon-img img
+.icon-img-section .icon-img{
+    padding-left: 25%;
+
+}
+/* -------------- IndexCategory------- */
+
+.card-section
 {
-margin-right: 10%;
-}
-.enjoyicon-img{
-    float: right;
-    margin-left: 20%;
-
-}
-.enjoyicon-img img{
-    
-}
-
-
-
-    
-
-
-/* --------------category----------------- */
-
-  .catg {
-     
-    text-align: center;
-}
-
-.card-veg {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box; 
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem;
-    width: 20%;
-    height: 30%;
-    margin-left: 20%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-}
-
-.card-img-top {
-    width: 50%;
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-    margin-bottom: 0;
-    padding-left: 30%;
-}
-
-.card-veg img {
-    vertical-align: middle;
-    border-style: none;
-}
-
-.card-veg body {
-    flex: 1 1 auto;
-    padding: 1.25rem;
-}
-
-.card-veg body p {
-    margin-top: 0;
-    
-}
-
-.card-veg .card-btn {
-    border-radius: 5px;
-    background-color: #9D53C4;
-    padding: 2% 10% 5%;
-    margin-left: 35%;
-    margin-bottom: 15%;
-}
-
-.card-nonveg .nonveg-btn {
-    border-radius: 5px;
-    background-color: #9D53C4;
-    padding: 2% 10% 5%;
-    margin-left: 35%;
-    margin-bottom: 15%;
-}
-
-.card-veg button a,
-.card-nonveg button a {
-     color: #FFFFFF;
-    text-decoration: none;
-    font-size: 18px; 
-
-
-    
-}
-
-.card-nonveg {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
- background-color: #fff;
-
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem;
-    margin-left: 60%;
-    width: 20%;
-    height: 30%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-}
-
-.card-nonveg .card-img-top {
-    width: 50%;
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-    margin-bottom: 0;
-    padding-left: 30%;
-}
-
-.card-nonveg img {
-    vertical-align: middle;
-    border-style: none;
-}
-
-.card-nonveg p {
-    flex: 1 1 auto;
-    padding: 1rem;
-}
-
-.card-nonveg button {
-    margin-left: 40%;
-    margin-bottom: 20%;
-}
-
-.card-body p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-} */
-
-.footer {
-   margin-top: 20%;
-   display: flex;
-   margin-left: 40%;
-}
-
  
-/*------------------------- vegimage------------------*/
- .category {
-   margin:100px 2px;
-   /* margin-right: 20px; */
+    padding-left: 23%;
+    height: 420px;
+ }
+.card-section h1{
+    margin-left: 30%;
+    line-height: 5rem;
+}
 
-} 
-.veg-category{
+
+
+.card-category
+{
+  
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    float: left;
+    border-radius: 4px;
+    width: 30%;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-category img
+{
+    border-radius: 50%;
+    width: 70%;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+  
+  .card-container 
+   {
+       font-size: 20px;
+
+    padding: 5% 0 5% 25%;
+  }
+  .card-container button{
+      padding: 4% 10%;
+      background-color: #9D53C4;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 12%;
+      border: none;
+      
+  }
+  .card-category p{
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  
+/*---------------banner---------------- */
+.banner{
     margin-top: 10%;
+    display: flex;
+}
+.banner img {
+    flex: 1;
+}
+/* ----------Download section------- */
+
+.download-section {
+    display: flex;
+}
+.download-image {
+    flex: 1;
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.download-content 
+{
+    margin-top: 3%;
+    text-align: left;
+    line-height: 2rem;
+}
+
+
+
+/*------------- footer-------------------- */
+
+.footer-page{
+    background-color:#73BD71 ;
+    text-align: center;
+     padding-top: 20px;
+}
+.footer-icon {
+color: black !important;
+font-size: 200%;
+margin-left: 1%;
+margin-right: 1%;
+padding-bottom: 3%;
+padding-top: 20px;
+padding-left: 20px;
+
+
+}
+ .footer-icon p{
+        margin-top: 20%;
+    }
+/*-----------------tooltip-------------------- */
+
+.tool
+{
+    position: relative;
+    display: inline-block;
+    margin-left: 0%;
+    margin-right: 1%;
+    
+  }
+  
+  .tool .tool-text {
+    visibility: hidden;
+    width:20px;
+     font-size: 20px;
+    color:white;
+    text-align: center;
+    /* border-radius: 20px; */
+    padding: 30px 10px 40px 2px;
+  
+  /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tool:hover .tool-text {
+    visibility: visible;
+    
+  }
+ /*------------------------- vegimage------------------*/
+ 
+.veg-category{
     text-align: center;
 }
 
@@ -324,10 +307,9 @@ margin-right: 10%;
     
 } 
 
-.card h4,
-p {
+.card h4,.card p {
     text-align: center;
-    padding: 2px;
+   
 }
 
 .card a {
@@ -344,18 +326,22 @@ p {
     margin-top: 10px; 
     padding: 10px 20px; 
 }
+.footer-section{
+    clear: both;
+}
 
 /* all form */
 
 form {
     margin: 2% 35%;
-    background-color: #f3e8f9;
+    margin-bottom: 20%;
+    background-color: #A560C9;
     padding-left: 2%;
     padding-top: 2%;
     border-radius: 4px;
     box-shadow: 0 0 2px #9D52C4;
     font-size: 18px;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
 }
 
 form input[type=email], 
@@ -364,7 +350,8 @@ form input[type=text],
 form input[type=textarea],
 form input[type=tel],
 form input[type=date],
-form input[type=time]
+form input[type=time],
+select
 
 {
     margin-top: 10px;
@@ -384,9 +371,15 @@ form>button {
     text-align: center;
     margin-top: 5%;
 }
-.place-order-btn{
+.place-order-btn {
     padding-right:33% ;
+
 }
+ .place-order-btn a{
+    text-decoration: none;
+    color: white;
+}
+
 .cancel-btn a{
     text-decoration: none;
     color: white;
@@ -426,6 +419,7 @@ form>button {
 .cart-item{
 margin-bottom: 20px;
 font-size: 20px;
+
 }
 .cart-item tr {
     text-align: left;
@@ -438,10 +432,15 @@ font-size: 20px;
 }
 
 .add-cart-section {
-    margin-top: 13%;
-    margin-left: 20%;
-}
 
+    margin-top: 10%;
+    margin-left: 20%;
+    padding-bottom: 20%;
+}
+.add-cart-section th{
+    background-color:#C0C0C0;
+    padding-left: 20px;
+}
 .add-cart-section h2 {
     margin-bottom: 10px;
     margin-left: 25%;
@@ -546,7 +545,6 @@ tr:nth-child(even) {
 }
 
 .card {
-
     box-shadow: 0 4px 8px 0 #888888;
     transition: 0.8s;
     width: 15%;
@@ -554,7 +552,7 @@ tr:nth-child(even) {
     float: left;
     margin-right: 2%;
     margin-top: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     padding: 2% 1%;
     
 }
@@ -567,8 +565,7 @@ tr:nth-child(even) {
     border-radius: 5px 5px 0 0;
 }
 
-.card h4,
-p {
+.card h4,.card p {
     text-align: center;
     padding: 4px;
 }
@@ -579,18 +576,40 @@ p {
 }
 /*-------------- my order-------------- */
 .table-content{
-    margin-top: 10%;
-    margin-left: 2%;
-    margin-right: 2%;
-    
-    border-collapse: collapse;
+    margin: 10% 2% 40% 5%;
+     border-collapse: collapse;
+     
+}
+.table-content th{
+    background-color: #C0C0C0;
 }
 .table-content .table-head{
    
     margin: 2%;
+    font-size: 20px;
 }
-
-
-
-
-
+/* -------------breadcrumb--------------- */
+.breadcrumb {
+    margin-top:150px ;
+    /* padding: 150px 16px; */
+    list-style: none;
+    background-color: #F5E4FF;
+  }
+  .breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  .breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+  .breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  .breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }
+  

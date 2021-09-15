@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta name="viewport" content="width=device-width" />
+<title>Order food Online | Chennai | Delhi | Home Delivery | Pickup</title>
+<meta name="description" content="Hungry? Order food online now from 1000+ restaurants in Chennai & New Delhi. Free Home Delivery & Take Away Available."/>
+<meta name="keywords" content = " food, eat, chennai, new delhi, halal, order online, order, delivery,food,delivery,menu,restaurant,take-out,takeout,dinner,lunch, online food chennai, online food delivery, online food delivery chennai, online food home delivery, online order, online order food, Online ordering, online restaurant order, order biryani online in chennai, order food online in chennai, order online,order online food, home delivery food chennai, home delivery food in chennai, home delivery restaurants chennai, delivery chennai, food delivery in chennai, food delivery near me ,food delivery service , food order, food order online, food order online chennai, free home delivery ood in chennai, Good Restaurants in chennai,"/>
+<meta property="og:title" content="Order Food Online from Chennai & Delhi Restaurents | Jusfood"/>
+<meta property="og:type" content="website" />
+<meta charset="UTF-8">
+<meta property="og:url" content="https://jusfood.com/" />
+<meta property="og:image" content="https://jusfood.com/images/image/home_banner/71.jpeg"/>
+<meta property="og:description" content="Order Food Online from best restaurants in Chennai, Delhi at jusfood. Pay online or cash on delivery."/>
+<link href="css/foundation/normalize.css" rel="stylesheet" type="text/css" />
+<link href="css/foundation/foundation.min.css" rel="stylesheet" type="text/css" />
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<meta name="google-signin-clientid" content="1016257726076-v6umc2rmr1ds27331sco01fi7dktocqo.apps.googleusercontent.com" />
+<meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.profile.emails.read" />
+<meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
+<meta name="google-signin-cookiepolicy" content="single_host_origin" />
+<meta property="og:image" content="jusfood.com/images/logo.png"/>
+<meta property="og:image:height" content="100" /> 
+<meta property="og:image:width" content="250" />
+<meta property="og:image:type" content="image/jpeg" />
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<link rel="shortcut icon" type="image/x-icon" href="https://jusfood.com/favicon.ico">
+<script>
+var current_url='';
+//alert(current_url);
+//console.log(current_url);
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '866605216794520', // local 1489237808072701 // online 866605216794520
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.3' // use version 2.2
+  });
+  };
+
+ (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+  function finaldata(type,data){
+	  nscriptlog(type+' ');
+	  nscriptlog(data);
+	  
+		  if(type==2) /*** google + sign in ****/
+		  {
+			  resp=data;
+				var primaryEmail='';
+				nscriptlog(typeof(resp.emails));
+				if(typeof resp.emails ==='undefined')
+				{
+				}
+				else
+				{
+					for (var i=0; i < resp.emails.length; i++) 
+					{
+					  if (resp.emails[i].type === 'account') primaryEmail = resp.emails[i].value;
+					}
+				}
+				
+				
+				var url_val="?email="+primaryEmail+"&name="+resp.displayName+"&gender="+resp.gender+"&url="+resp.url+"&image_url="+encodeURI(resp.image.url)+"&gid="+resp.id+"&f_name="+resp.name.givenName+"&l_name="+resp.name.familyName+'&l='+current_url;
+				
+				nscriptlog(url_val);
+				var red='https://jusfood.com/register_gplus.php';
+				red=red+url_val;
+				nscriptlog(red);
+				window.location=red;
+
+		  }
+		  else if(type==1)
+		  {
+			  response=data;
+			 nscriptlog(response);
+			 red='https://jusfood.com/register_fb.php?';
+			 if(typeof response.email !== "undefined")
+			 {
+				 red=red+'email='+response.email+'&';
+			 }
+			 if(typeof response.gender !== "undefined")
+			 {
+				 red=red+'gender='+response.gender+'&';
+			 }
+			 if(typeof response.hometown !== "undefined" && typeof response.hometown.name !== "undefined")
+			 {
+				 red=red+'hometown='+response.hometown.name+'&';
+			 }
+			 if(typeof response.location !== "undefined" && typeof response.location.name !== "undefined")
+			 {
+				 red=red+'location='+response.location.name+'&';
+			 }
+			 if(typeof response.birthday !== "undefined")
+			 {
+				 red=red+'birthday='+response.birthday+'&';
+			 }
+			 if(typeof response.link !== "undefined")
+			 {
+				 red=red+'link='+response.link+'&';
+			 }
+			 if(typeof response.username !== "undefined")
+			 {
+				 red=red+'username='+response.username+'&';
+			 }
+			 if(typeof response.id !== "undefined")
+			 {
+				 red=red+'fbid='+response.id+'&';
+			 }
+			 if(typeof response.timezone !== "undefined")
+			 {
+				 red=red+'timezone='+response.timezone+'&';
+			 }
+			 if(typeof response.first_name !== "undefined")
+			 {
+				 red=red+'fname='+response.first_name+'&';
+			 }
+			 if(typeof response.last_name !== "undefined")
+			 {
+				 red=red+'lname='+response.last_name+'';
+			 }
+			 if(typeof response.name !== "undefined")
+			 {
+				 red=red+'name='+response.name+'';
+			 }
+			 red+='&s='+current_url;
+			 nscriptlog(red);
+			 window.location=red;
+		  }
+		  else
+		  {
+			  nscriptlog(JSON.parse(data));
+		  }
+	  }
+  
+  var fbdatavar;
+  function checkFBLogin(){
+	  //////////// Facebook
+	   nscriptlog('started checking Facebook Status');
+	   FB.getLoginStatus(function(response) {    
+	   fbdatavar= response;     
+	   nscriptlog(fbdatavar);
+
+   	  if (fbdatavar.status === 'connected') {
+	  		nscriptlog('Logged into your app and Facebook.');
+	  		nscriptlog('Welcome!  Fetching your information.... ');
+	  		FB.api('/me', function(response) {		finaldata(1,response); nscriptlog(response); 	});
+      		//finaldata(1,fbdatavar);
+			//return fbdatavar;
+      } else if (fbdatavar.status === 'not_authorized') {
+       		nscriptlog('The person is logged into Facebook, but not your app.');
+			FB.login(function(){checkFBLogin()});
+      } else {
+      		nscriptlog('The person is not logged into Facebook, so we\'re not sure if they are logged into this app or not.');
+	  		FB.login(function(){checkFBLogin()});
+	  }
+	  });
+	   //////////// Facebook
+	  
+	  }
+	  
+function checkGoogleLogin(){
+	 nscriptlog('started checking G+ Status');
+	gapi.auth.signIn({
+    'callback': function(authResult){
+		nscriptlog(authResult);
+		if (authResult['status']['signed_in']) {
+   			nscriptlog('Logged into G+');
+	  		nscriptlog('Welcome!  Fetching your information.... ');
+			
+			gapi.client.load('plus','v1', function(){
+ 			var request = gapi.client.plus.people.get({
+  				 'userId': 'me'
+ 			});
+			 request.execute(function(resp) {
+			   nscriptlog(resp);
+			   finaldata(2,resp);
+			 });
+});
+			
+   
+ 		 } else {
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    nscriptlog('Sign-in state: ' + authResult['error']);
+  }
+		
+	}}); 
+	}
+	function checkTwitterLogin(){
+	window.open("twitter/login.php?t="+current_url);
+
+	}
+
+
+	
+	
+function nscriptlog(logm){
+	console.log(logm);
+	}
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44047390-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style>
+.orbit-timer{display:none;}
+.orbit-bullets li.active{background-color:#8b1428;}
+.orbit-bullets li {
+  background-color:#e67f23;
+}
+option {
+  color: #000;
+}
+
+small.error#md {
+  width: 100% !important;
+  float: left;
+  height: 28px !important;
+  margin-left: 8px !important;
+  background-color: transparent !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  padding-left: 12px !important;
+  line-height: 27px;
+}
+.example-orbit{margin:0px;padding:0px;list-style:none;}
+.orbit-container .orbit-slides-container img {
+    display: block;
+    max-width: 100%;
+    margin: 0px auto;
+    
+}
+
+.orbit-container .orbit-prev{background:url(images/gift-left-arrow.png) no-repeat !important;}
+.orbit-container .orbit-next{background:url(images/gift-right-arrow.png) no-repeat !important;right:-5px;}
+.orbit-container .orbit-prev>span{background-color:transparent !important;border-right-color: transparent !important;
+}
+.orbit-container .orbit-next>span{background-color:transparent !important;border-left-color: transparent !important;
+}
+.orbit-container .orbit-prev>span:hover{background-color:transparent !important;border-right-color: transparent !important;
+}
+.orbit-container .orbit-next>span:hover{background-color:transparent !important;border-left-color: transparent !important;
+}
+.orbit-container .orbit-prev{width:25px !important;margin-left: 5px;}
+.select_style,.default{background-color:#8b1428 !important;}
+
+
+/*popup*/
+#popup {
+    width: 824px;
+    margin: auto;
+    margin-top: -40px;
+    z-index: 1000;
+    /* padding-right: 7px; */
+    background-color: #34342f;
+    height: 420px;
+}
+
+img.cls {
+    position: absolute;
+    top: -11px;
+    right: -9px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+div#popup-main {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    background-color: #34342f;
+    padding-top: 6px;
+}
+
+.bk-get{text-align:center;margin: 11px 0px;}
+.bk-get a {
+    background-color: #5f7902;
+    padding: 5px 21px;
+    font-size: 13px;
+    color: #fff;
+    margin: 0px 2px;
+    border-radius: 4px;
+}
+
+.logos-list ul.example-orbit.orbit-slides-container{height:135px !important;}
+/*popup*/
+input.subs1.gps {
+    background-image: url(images/gps.png);
+    background-size: 25px;
+    text-align: center;
+    color: #9db41c;
+    background-position: 11px 10px;
+    padding: 0px !important;
+    margin-left: -57px;
+    background-repeat: no-repeat;
+}
+.gift-banner ul.example-orbit.orbit-slides-container {
+    width: 92% !important;
+    overflow: hidden;
+    margin: 0px auto;
+}
+@media only screen and (max-width:40em){
+
+header {    min-height: 530px !important; height:auto !important;
+    padding-top: 0px !important;
+}
+div#at-share-dock
+{
+	display:none !important;
+}
+}
+
+</style>
+
+</head>
+<body>
+
+<!--Popup start here-->
+<!--<div id="over_back" style="position:fixed;width:100%;height:100%;background: rgba(0, 0, 0, 0.6);z-index: 200;">
+</div>
+<div id="over_back1" style="position:fixed;z-index: 9999999;top: 120px;width:100%;text-align:center;margin:0px auto;">
+<div id="popup">
+<div id="popup-main">
+
+<a href="#"> <img src="images/popup_banner.jpg" alt="image" /></a>
+<img onclick="$('#over_back,#over_back1').fadeOut()" src="images/closed.png" alt="close" class="cls" width="40px" height="40px;"/>
+
+<div class="bk-get">
+
+<a href="#">Back</a>
+<a href="#">Get it</a>
+
+
+
+</div>
+
+</div>
+</div>
+</div>
+-->
+
+<!--Popup end here-->
+
+
+<div class="video-background">
+    <div class="video-foreground">
+    	<div class="show-for-small-only"><div class="vid-img"><!--<img src="video/Restaurant.gif">--></div></div>
+	<div class="hide-for-small-only">
+      <video class="sleep-video1" loop autoplay muted>
+          <source src="video/1400x748.mp4" type="video/mp4">
+          <source src="video/1400x748.ogv" type="video/ogg">
+        </video>
+	 </div>  
+    </div>
+  </div>
+<!--header-starts-->
+ 
+ <header style="
+    width: 100%; position:inherit;
+  
+    height: 610px;
+    background-attachment: scroll;
+    background-position: 50% 0;
+    background-size: cover;" title="order food online" data-bg-video="video/bgvideo_new.wmv">
+<div id="outer-wrap">
+<div class="sign-order">
+<div class="sign">
+<a  data-reveal-id="firstModal" >Sign In</a>
+</div>
+</div>
+<div id="logo"><a href="index.php"><img src="images/logo.png" alt="logo" /></a></div>
+</div>
+
+
+<!--<div class="select-city-bg">
+<div class="select-city">
+<select class="mod">
+<option>Chennai</option>
+<option>Delhi</option>
+</select>
+</div>
+</div>
+
+-->
+
+
+
+<div class="gp">
+<a href="group-email.php"><img src="images/gp.png" alt="gp"/></a>
+</div>
+<div class="header-apple-google">
+<a onClick="getSubway();" alt="logo"><img src="images/subway.png" alt="logo"></a>
+<a href="https://itunes.apple.com/in/app/jusfood.com/id845045732?mt=8"><img src="images/apple-app1.png" alt="logo"></a>
+<a href="https://play.google.com/store/apps/details?id=jsfood.nscript.in"><img src="images/google-play-app1.png" alt="logo"></a>
+</div>
+
+
+
+<div class="row">
+<div id="start-order">
+<!--<h1>Start your order</h1>-->
+<h1>Order Food Online From Your Favourite Chennai Restaurants</h1>
+<form action="res.php" method="post" class="loc_form" id="loc_form">
+<input type="hidden" value="" class="loc_id" name="location" />
+</form>
+<form data-abide action="restaurants.php" method="get" enctype="text/plain">
+
+
+
+<div class="select-city">
+<select class="mod" name="city" onChange="get_location();">
+<option value="1">Chennai</option>
+<option value="2">Delhi</option>
+</select>
+</div>
+
+
+
+
+<div class="drop1">
+<div class="select_style">
+<select required class="select_box default" name="type" id="ddp">
+<option value="door-delivery">Home Delivery</option>
+<option value="pick-up">Pick up</option>
+<option value="both">Both</option>
+</select>
+</div>
+</div>
+
+<div class="tyty">
+<input type="text" name="cityname1" id="crh" required class="sub1" placeholder="Your Location or Area . . ." vdt_offset="-10"/>
+<small class="error" id="md" style="background-color:#8B1428 !important;color:#fff;border-radius:4px;padding: 4px 4px 4px 12px;">Required</small>
+</div>
+<input type="hidden" name="cityname" value="" />
+<input type="button" onClick="getLocation();"  class="subs1 gps" value="&nbsp;" /><input type="hidden" name="sub_way" id="sub_way" value="0"/>
+<input type="button" onClick="submitforr();"  class="subs1" value="GO" />
+</form>
+</div>
+</div>
+
+
+
+
+</header>
+
+<!--header-ends-->
+
+
+<div class="food-desc">
+<div class="row collapse">
+
+<div class="column large large-4 medium-4 slid-left">
+<img src="images/index3-mobile-banner.png" alt="logo" />
+</div> 
+<div class="column large large-8 medium-8 slid-right small-only-text-center">
+<h2>Order Food With Our Android & i Phone App</h2>
+<h3>Convenient Payment Options Available</h3>
+<p>Make your food order at your ease with our user friendly mobile apps available in Android and i Phone App. Jusfood mobile app also makes your online food ordering more fun with its timely offers and discounts.</p>
+<p>Jusfood massive apps that you can use to quickly and securely get your favourite food delivered to your doorstep with the help of your smartphone.</p>
+ <p>Terms and Conditions Apply</p>
+
+</div>  
+
+</div>
+</div>
+
+
+
+
+
+<!--<div class="logos-list">
+<div class="row collapse small-only-text-center">
+
+<ul class="example-orbit" data-orbit data-options="animation:slide;timer_speed:3000;slide_number: false;bullets:false;next_class: false;prev_class: false;resume_on_mouseout: true; animation_speed:900;">
+
+<li>
+<div class="loc-scroll">
+<a href=""><img src="images/l1.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l2.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l3.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l1.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l2.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l3.jpg" alt="Restaurant Logo" /></a>
+</div>
+</li>
+
+
+<li>
+<div class="loc-scroll">
+<a href=""><img src="images/l5.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l6.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l7.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l8.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l5.jpg" alt="Restaurant Logo" /></a>
+<a href=""><img src="images/l4.jpg" alt="Restaurant Logo" /></a>
+</div>
+</li>
+
+
+</ul>
+</div>
+</div>-->
+<div class="seo-banner">
+<div class="row collapse">
+<div class="inner-seo">
+<h2>Order food online from your favorite restaurants in <br>
+New Delhi NCR & Chennai.</h2>
+<h3>Jusfood offers you Choice of more than 1000 + restaurants with interactive menus,<br>
+ home delivery, online payment and range of food cuisines to taste.</h3>
+
+
+</div>
+</div>
+</div>
+
+
+
+<!--footer-starts-->
+<style>
+ #tophead {
+height: 17px;
+width: 100%;
+background-color: #afbb0d;
+}
+#nav_div {
+height: 84px;
+width: 100%;
+background-color: #8c1428;
+border-bottom: 5px solid #afbb0d;
+}
+#calll {
+position: absolute;
+background: url('images/call-bg.png') no-repeat !important;
+width: 582px;
+height: 38px;
+margin-top: 106px;
+margin-left: 136px;
+z-index: 50;
+}
+ #quick-enquiryx{width:321px !important;float:left;position:fixed;top: 200px;z-index:1050;left:-275px;}
+#quick-enquiry-leftx{width:275px;float:left;height:332px;background:url('images/box6.png') no-repeat !important;  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;}
+#hudx{float:left;margin-top:10px;}
+.s1x {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 57px;
+    float: left;
+    width: 100%;
+    font-family: 'ChunkfiveEx';
+    padding-bottom: 3px;
+}
+.s2x{color:#fff;font-size:32px;margin-left:53px;position: relative;font-family: 'ChunkfiveEx';float: left;width: 100%;}
+#q-formx{float:left;margin-top: 20px;margin-left: 17px;}
+.box1{font-family: "Segoe UI";width:239px !important;float:left;  height: 30px !important;
+    background: url(images/spritesheet.png) no-repeat !important;
+    background-position: -253px -66px !important; padding-left:30px !important;color:#fff !important;font-size:14px !important;border:none;margin-left:8px !important; border: none !important;
+  outline: none !important;
+  box-shadow: none !important;}
+.box2{font-family: "Segoe UI";width:239px !important;float:left;height: 30px !important;
+    background: url(images/spritesheet.png) no-repeat !important; background-position: -4px -106px !important;padding-left:30px !important;color:#fff !important;font-size:14px;border:none;margin-left:8px !important;  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;}
+  .box-mobile{height: 30px !important;
+    background: url(images/spritesheet.png) no-repeat !important;
+    background-position: -4px -66px !important;font-family: "Segoe UI";width:239px !important;float:left;padding-left:30px !important;color:#fff !important;font-size:14px;border:none;margin-left:8px !important;  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;}
+.box3{font-family: "Segoe UI";width:239px !important;float:left;height:75px !important;background: url(images/spritesheet.png) no-repeat !important;
+    background-position: -253px -106px !important;padding-left:30px !important;color:#fff !important;font-size:14px !important;border:none;resize:none;padding-top: 5px !important;position: relative;left:8px;overflow: hidden;  border: none !important;
+  outline: none !important;padding-top:15px;line-height: 18px;margin-bottom: 10PX;
+  box-shadow: none !important;}
+.box1::-webkit-input-placeholder{color:#fff;}
+.box2::-webkit-input-placeholder{color:#fff;}
+.box3::-webkit-input-placeholder{color:#fff;}
+.box-mobile::-webkit-input-placeholder{color:#fff;}
+.box1:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+.box2:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+.box3:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+.box1::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+.box2::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+.box3::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+.box1:-ms-input-placeholder {  
+   color: #fff;  
+}
+.box2:-ms-input-placeholder {  
+   color: #fff;  
+}
+.box3:-ms-input-placeholder {  
+   color: #fff;  
+}
+.sb3{width:93px;float:left;height:28px;background: url(images/spritesheet.png) no-repeat !important;
+    background-position: -46px -6px !important;cursor:pointer;text-indent:-9999px;border:none;margin-left: 156px;border: none !important;
+  outline: none !important;
+  box-shadow: none !important;}
+#quick-enquiry-right{width:40px;float:left;background: url(images/spritesheet.png) no-repeat !important;
+    background-position: -500px -66px !important;margin-top:100px;margin-left: -3px;height:145px;}
+#shadow_bottom{display:none;}
+#blog {
+width: 152px;
+height: 84px;
+background-image: url('images/gp.png') !important;
+background-repeat: no-repeat;
+float: left;
+position: relative;
+bottom: 3px;
+}
+
+#inner-page1,#inner-page{ background:none; }
+.tab{ margin-left:0px; }
+#order_section{ padding:0px; }
+#order_pad{ top:0px; }
+#inner-page{width:800px;}
+.headin{display:none;}
+#nav_bar{display:none;}
+
+#quick-enquiryx small.error {
+    width: 238px !important;
+    float: left;
+    height: 13px !important;
+    margin-left: 8px !important;
+    background-color: transparent !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    padding-left: 12px !important;
+    line-height: 13px;
+    font-size: 10px !important;
+}
+input[type="text"] {
+
+    margin-bottom: 13px;
+}
+
+.error input, .error textarea, .error select {
+    margin-bottom: 0 !important;
+}
+.bg-line1 {
+    background: url(images/spritesheet.png) no-repeat;
+    background-position: -7px -42px;
+    height: 3px;
+    margin: 3px 0px;
+}
+.bg-line1 img
+{
+	visibility:hidden;
+}
+
+</style>
+
+
+<div id="quick-enquiryx">
+<div id="quick-enquiry-leftx">
+<div id="hudx">
+<span class="s1x">For Help:</span>
+<span class="s2x">99402 65435</span>
+</div>
+
+<div id="q-formx" class="qe-formx">
+<form data-abide action="" method="post">
+<div>
+<input type="text" class="box1" placeholder="Name" name="feed_name" required />
+<small class="error">Required</small>
+</div>
+<div>
+<input type="hidden" name="feed_id" value="0" vdt="any" />
+<input type="text" class="box2" placeholder="Mail ID" name="feed_email" required pattern="email" />
+<small class="error">Required</small>
+</div>
+<div>
+<input type="text" class="box-mobile" placeholder="Mobile" name="feed_mobile" required pattern="mobile_no" />
+<small class="error">Required</small>
+</div>
+<div>
+<textarea class="box3" placeholder="Feedback" name="feed_back" required></textarea>
+<small class="error">Required</small>
+</div>
+<input type="submit"  class="sb3" />
+</form>
+</div>
+
+</div>
+<a href="#" id="clls" onclick="swap();"><div id="quick-enquiry-right"></div></a>
+</div>
+ 
+
+
+
+
+<script>
+function swap(){
+if($("#quick-enquiryx").css('left')=="-275px"){
+		$("#quick-enquiryx").animate({left: -17});
+	}
+	else{
+		$("#quick-enquiryx").animate({left: -275});
+		}
+	}
+</script>
+
+
+<script>
+    /*(function($){
+        $(window).load(function(){
+			$("#q-formx").find("input[type=hidden]").val(1);
+            $(".box3").mCustomScrollbar();
+			
+        });
+    })(jQuery);*/
+</script>
+<!--footer-starts-->
+
+
+
+<footer>
+<div id="footer-top">
+<div class="row collapse red-pad">
+<div class="column large-3 medium-6 restaurants small-only-text-center medium-only-text-center">
+<h6>Restaurants in Chennai</h6>
+
+<!--<li><a href="newlayoutfood.php">Demo Restaurants</a></li>-->
+<ul>
+<li><a href="https://jusfood.com/restaurants/Velachery%7C%7C%7C%7C12.975971%7C%7C80.2212092/pick-up//">Restaurants in Velachery</a></li><li><a href="https://jusfood.com/restaurants/Besant%20Nagar%7C%7C%7C%7C13.0002421%7C%7C80.2668372/pick-up//">Restaurants in Besant Nagar</a></li><li><a href="https://jusfood.com/restaurants/Kilpauk,%20Chennai,%20Tamil%20Nadu,%20India%7C%7C%7C%7C13.0836071%7C%7C80.23920559999999%7C%7C0/pick-up/">Restaurants in Kilpauk</a></li><li><a href="https://jusfood.com/restaurants/Adyar%7C%7C%7C%7C13.0011774%7C%7C80.2564957/pick-up//">Restaurants in Adyar</a></li><li><a href="https://jusfood.com/restaurants/Nungambakkam%7C%7C%7C%7C13.0595365%7C%7C80.2424792/pick-up//">Restaurants in Nungambakkam</a></li><li><a href="https://jusfood.com/restaurants/Mylapore,%20Chennai,%20Tamil%20Nadu,%20India%7C%7C%7C%7C13.0367914%7C%7C80.26763030000006%7C%7C0/door-delivery/">Restaurants In Mylapore</a></li><li><a href="https://jusfood.com/restaurants/Vadapalani%7C%7C%7C%7C13.0545014%7C%7C80.2114219/pick-up//">Restaurants In Vadapalani</a></li><li><a href="https://jusfood.com/restaurants/T.Nagar%7C%7C%7C%7C13.0405026%7C%7C80.2336924/pick-up//">Restaurants In T Nagar</a></li><li><a href="https://jusfood.com/restaurants/Chetpet%7C%7C%7C%7C13.071521%7C%7C80.2415162/pick-up//">Restaurants In Chetpet</a></li><li><a href=""></a></li></div>
+
+<div class="column large-4 medium-6 restaurants small-only-text-center medium-only-text-center">
+<h6>Popular Cuisines in Chennai</h6>
+<ul>
+<li><a href="http://jusfood.com/restaurants/Chinese/pick_up/">Chinese</a></li>
+<li><a href="http://jusfood.com/restaurants/Malaysian/pick_up/">Malaysian</a></li>
+<li><a href="http://jusfood.com/restaurants/Thai/pick_up/">Thai</a></li>
+<li><a href="http://jusfood.com/restaurants/Arabian/pick_up/">Arabian</a></li>
+<li><a href="http://jusfood.com/restaurants/Multi%20Cuisine/pick_up/">Multi Cuisine</a></li>
+<li><a href="http://jusfood.com/restaurants/Pure%20Vegetarian/pick_up/">Pure Vegetarian</a></li>
+<li><a href="http://jusfood.com/restaurants/Non%20Vegetarian/pick_up/">Non Vegetarian</a></li>
+<li><a href="http://jusfood.com/restaurants/Continental/pick_up/">Continental</a></li>
+</ul>
+</div>
+
+
+<div class="column large-3 medium-4 restaurants  small-only-text-center medium-only-text-center">
+<h6>Featured Restaurants</h6>
+<ul>
+<li><a href="https://jusfood.com/restaurant/OCEANA%20MULTI%20CUISINE%20RESTAURANT/%C2%A0/%C2%A0/1443/ind-restaurants-order/">OCEANA MULTI CUISINE</a></li><li><a href="https://jusfood.com/restaurant/TAMARIND%20RESTAURANT/%C2%A0/%C2%A0/686/ind-restaurants-order/">TAMARIND RESTAURANT</a></li><li><a href="https://jusfood.com/restaurant/BIRYANI%20DARBAR%20N%20BENGALI%20CUIUSINE/%C2%A0/%C2%A0/1456/ind-restaurants-order/">BIRYANI DARBAR</a></li><li><a href="https://jusfood.com/restaurant/East%20Coast%20Grill/%C2%A0/%C2%A0/56/ind-restaurants-order/">EAST COAST GRILL</a></li><li><a href=""></a></li></ul>
+
+<div class="fd">
+<h6>Add My Restaurant</h6>
+<p>Jusfood welcomes your restaurant <br /> to  get added in our chain</p>
+<a href="/add-restaurant.php"><div class="add-restaurant">
+Why wait? Add your<br />Restaurant with Us</div></a>
+</div>
+
+</div>
+<div class="column large-2 medium-4 restaurants small-only-text-center medium-only-text-center">
+<h6>Get Social</h6>
+<div id="icons"><a href="https://www.facebook.com/jusfood" target="_blank"><img src="images/ns1.jpg" alt=""/></a>
+<a href="https://twitter.com/Jusfoodchennai" target="_blank"><img src="images/ns2.jpg" alt=""/></a>
+<a href="https://plus.google.com/u/0/114206370918435118562" target="_blank"><img src="images/ns3.jpg" alt=""/></a>
+<a href="https://in.pinterest.com/jusfood/" target="_blank"><img src="images/ns4.jpg" alt=""/></a>
+<a href="https://www.instagram.com/Jusfood3705/" target="_blank"><img src="images/ns5.jpg" alt=""/></a>
+<a href="https://del.icio.us/jusfoodonline" target="_blank"><img src="images/ns6.jpg" alt=""/></a>
+<a href="https://www.tumblr.com/blog/jusfoodonline" target="_blank"><img src="images/ns7.jpg" alt=""/></a>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="header-apple-google1">
+<h6>Download app</h6>
+<a href="https://itunes.apple.com/in/app/jusfood.com/id845045732?mt=8"><img src="images/apple-app1.png" alt="logo"></a><br />
+<a href="https://play.google.com/store/apps/details?id=jsfood.nscript.in"><img src="images/google-play-app1.png" alt="logo"></a>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+<div id="footer-mid">
+<div class="row collapse red-pad">
+
+<div class="column large-2 medium-2 foot-logo small-only-text-center">
+<a href="index.php"><img src="images/foot_logo.png" alt="logo"/></a>
+</div>
+
+<div class="column large large-7 medium-10 footer-menu small-only-text-center">
+<ul id="menu1">
+<li><a href="https://jusfood.com/index.php">home</a></li>
+<span>|</span>
+<li><a href="https://jusfood.com/about.php">about</a></li>
+<!--<span>|</span>
+<li><a href="http://jusfood.com/blog/">blog</a></li>-->
+<span>|</span>
+<li><a href="https://jusfood.com/contact.php">contact</a></li>
+<!--<span>|</span>
+<li><a href="offer.php">offer</a></li>-->
+<!--<span>|</span>
+<li><a href="https://jusfood.com/restaurants.php">restaurants</a></li>-->
+<span>|</span>
+<li><a href="https://jusfood.com/how-it-works.php">how it works</a></li>
+<span>|</span>
+<li><a href="https://jusfood.com/legal.php">legal</a></li>
+</ul>
+
+<div id="inner-footer-bot">
+<p>Copyright &copy; 2021 Jusfood.com. All Rights Reserved.</p>
+</div>
+
+</div>
+
+<!--<div class="column large-3 medium-3 app small-only-text-center">
+<div class="footer-apple-google">
+<h1>Download our App </h1>
+<a href=""><img src="images/apple-app1.png" alt="logo"></a>
+<a href=""><img src="images/google-play-app1.png" alt="logo"></a>
+</div>
+</div> ©-->
+
+
+
+<div class="column large-3 medium-12 small-only-text-center">
+<div id="subscribe-top">
+<form vdt action="email_subscribe.php" method="post" data-abide style="margin:0px;">
+<div style="display:inline-block">
+<input type="text" pattern="email" required="required" class="sub" name="subscribe_email" placeholder="Subscribe" vdt_offset="0"/>
+<small class="error en">Enter Email ID</small>
+</div>
+<input type="submit"  class="subs" value="GO" vdt_offset_y="20" style="
+    float: right;
+"/>
+</form>
+</div>
+<div id="subscribe-bot">
+<ul>
+<li class="card1"><!--<img src="images/ssl.png" alt="ssl" class="ssl-secure"/>--></li>
+<li class="card2"><!--<img src="images/maestro.png" alt="mastro" />--></li>
+<li class="card3"><!--<img src="images/mastercard.png" alt="mastercard" />--></li>
+<li class="card4"><!--<img src="images/visa.png" alt="visa" />--></li>
+<li class="card5"><!--<img src="images/paytm.png" alt="paytm" />--></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+<!--footer-ends-->
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-ends-->
+<div class="show-for-small-only">
+
+
+<div class="app-banner app-banner--dark">
+<div class="row collapse">
+
+                <div class="col-s-12">
+				
+                    <div class="left app-banner-icon">
+                        <img src="images/inner-logo.png">
+                    </div>
+					
+                    <div class="app-banner-text">
+                        <p class="app-banner-text-heading">Jusfood Order App</p>
+                        <p class="app-banner-text-sub-heading">Order Food Online!</p>
+                    </div>
+                
+                <div class="col-s-4">
+                    <a href="https://jusfood.com/go_to_app_restaurant.php" class="btn app-banner-install">Get</a>
+                </div>
+				
+            </div>
+</div>
+</div>
+
+</div>
+
+
+<div class="foot-food-details">
+<div class="row collapse">
+
+<div class="wj">Welcome to JUSFOOD </div>
+
+
+<div class="row collapse food-wrap">
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content ">
+<p>Remember last time when you had close guest from <span>Delhi, NCR, Chennai</span> announcing their surprise visit to your sweet home. Which is then followed by sincere requests like let’s have the <span>famous biryani of Chennai.</span> While someone is asking to eat chole bhature from <span>shree mithai or om corner in Delhi.</span> God they blurted as if the prime purpose was to taste the food than to see the well being of you. Well we know its not like that they love to get pampered by you.</p> 
+<p>Well whatever the shower love on us, we believe Athithi devo bhave…. Right as always</p>
+</div> 
+</div> 
+<div class="column large-2 medium-2 fd-icon1">
+<img src="images/fd-icon1.jpg" alt="icon" />
+</div> 
+</div>  
+
+
+<div class="bg-line1"></div>
+
+
+<div class="row collapse food-wrap">
+<div class="column large-2 medium-2 fd-icon2">
+<img src="images/fd-icon2.jpg" alt="icon" />
+</div>
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content1">
+<h2><span>JUSFOOD</span> – Your saviour in so many situations</h2>
+
+<p>Jusfood will help in making your quest for enjoying good lunch, dinner which is are home delivered all the more interesting and excited when you are scratching your head to entertain your guest with their demands met.</p> 
+
+<p>There are two ways you can <span>order food online</span> with us. <span>Download Jusfood app on your smartphone</span> or open our user friendly website and get it home delivered. Or if you are busy in your schedule and just want to eat at leisure at home you can order takeaway from host of restaurants and pickup the food parcel kept ready for you while you are on the way to home.</p> 
+
+<p>Well did I forgot to tell you something about offers and discounts you can get while you order using our mobile app just insert the valid discount codes sent to you 
+and that’s it. </p>
+
+</div> 
+</div>  
+</div>
+
+<div class="bg-line2"><img src="images/bg-line2.png" alt="icon" /></div>
+
+
+<div class="row collapse food-wrap">
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content">
+<h2>Thank god it’s Friday evening….</h2>
+<p>Think of it and your mind start playing with different plans to enjoy your weekends. There are days when you are alone at house and you just want to spend a quality time with your hubby than spend hours in kitchen preparing food. Just want your <span>lunch dinner home delivered from your favourite restaurant,</span> in fact to savour the ever missing company you have been longing for. </p>
+
+<p>Log on to our website or access our <span>jusfood mobile app</span> and order the cravings from your favourite </p>
+
+</div> 
+</div> 
+<div class="column large-2 medium-2 fd-icon3">
+<img src="images/fd-icon3.jpg" alt="icon" />
+</div> 
+</div>
+
+<div class="bg-line1"></div>
+
+<div class="row collapse food-wrap">
+<div class="column large-2 medium-2 fd-icon4">
+<img src="images/fd-icon4.jpg" alt="icon" />
+</div>
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content1">
+<h2>Take your well deserved break… No Sunday cooking’s…</h2>
+<p>There are times when your body demands you to just leave everything and relax as it has been days since you had ordered your favourite breakfast from spoonbill in Chennai or tandoori dinner from motimahal deluxe or from any other <span>favourite restaurant in Delhi NCR or Chennai.</span></p>
+</div> 
+</div>  
+</div>
+
+<div class="bg-line2"><img src="images/bg-line2.png" alt="icon" /></div>
+
+
+<div class="row collapse food-wrap">
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content">
+<h2>Celebration and congratulation…..</h2>
+<p>Celebrate birthdays, anniversaries or any auspicious occasion with your friends and family by ordering or gifting lunch and dinners to your loved ones by <span>ordering food online from jusfood.</span></p> 
+
+<p>Pamper your child studying in hostel by sending online cake delivery for his birthdays or to friends gifting them wedding cakes from the finest bakeries near you. </p>
+
+<p>Sweets are integral part of any Indian celebration, find desserts in Delhi and many other cities which deliver to you. Order authentic Indian desserts such as Halwa, Gulab Jamun or Kheer from famous places in your neighborhood. Shre mithai, ganga sweets in Chennai.</p>
+
+</div> 
+</div> 
+<div class="column large-2 medium-2 fd-icon5">
+<img src="images/fd-icon5.jpg" alt="icon" />
+</div> 
+</div>
+
+
+<div class="bg-line1"></div>
+
+<div class="row collapse food-wrap">
+<div class="column large-2 medium-2 fd-icon6">
+<img src="images/fd-icon6.jpg" alt="icon" />
+</div>
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content1">
+<h2>Put a smile on your loved ones face while they have been doing same all the time...</h2>
+<p>Do you remember when you have given surprise to your parents living in <span>Chennai or delhi with their favourite Thai, chettinad dish, chinese or north indian</span> parantha with famous chicken biryani while you were away with your assignment abroad. Grab these moments as clock never ticks back. And jusfood will help you to make your parents, cousins and friends smile and remember you fondly.</p>
+</div> 
+</div>  
+</div>
+
+
+<div class="bg-line2"><img src="images/bg-line2.png" alt="icon" /></div>
+
+
+
+<div class="row collapse food-wrap">
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content">
+<h2>No confusion. Get what you ordered...</h2>
+<p>Gone are the days when you had to pick up the phone and list out all the items right from the roti’s nans, pickles, with all remarks like extra salad, extra chutney, no teekha and so on… Am I right and not to forget when you have a lame person sitting on other side listening to your order and asking you to repeat the order again and again. Now you don’t have to explain on phone that bhaiya pls no chilly in my gobi manchurian or use less oil. No more of these experiences.</p> 
+
+<p>Simply enter in the special instruction and same shall be conveyed and followed. You will never get a yellow dal when you asked for dal tadkka. You will get your tandoori murg the way you had always wanted. Your nan will have no butter when you have always asked for plain nan.  </p>
+
+<p>THAT’S WHY THEY SAY  <span>Don’t be on hold or in line, BE ONLINE.</span></p>
+</div> 
+</div> 
+<div class="column large-2 medium-2 fd-icon7">
+<img src="images/fd-icon7.jpg" alt="icon" />
+</div> 
+</div>
+
+
+<div class="bg-line1"></div>
+
+<div class="row collapse food-wrap">
+<div class="column large-2 medium-2 fd-icon8">
+<img src="images/fd-icon8.jpg" alt="icon" />
+</div>
+<div class="column large large-10 medium-10 small-only-text-center">
+<div class="food-wrap-content1">
+<h2>What are the choices of restaurants in jusfood.</h2>
+<p>When you <span>order food online</span> from our website or mobile app you have option to see a wide selection of restaurant which are dying to serve you home delivery. You have at your fingers tips more than <span>1000 + restaurants in Chennai and Delhi.</span> From traditional meals to well-known fast food restaurants like Dominos, KFC, Pizza Hut and meal delivery people along with <span>international and national cuisines as Thai, Korean, Burmese Japanese, Biryani and Punjabi,</span> you can find it all at one place.
+You can see the interesting menus with prices and description of the dish that help you to decide your selection of food order conveniently. Don’t forget the highlight recommended ones. Get late night food delivery if you plan to be awake in late hours with Night restaurant like midnight express which is open till 3am. Browse jusfood for many more...</p>
+</div> 
+</div>  
+</div>
+
+<div class="bg-line2"><img src="images/bg-line2.png" alt="icon" /></div>
+
+
+
+
+<div class="how-to-order">
+<h2>HOW TO ORDER</h2>
+<p>All it takes is 3 easy steps:</p>
+<ul>
+<li><h3>SELECT YOUR CITY AND AREA OF DELIVERY</h3>
+<p>A list of restaurants is displayed that can deliver your food order to your home.</p></li>
+<li><h3>SELECT YOUR RESTAURANT</h3>
+<p>You select as per your choice of restaurant from the list serving <span>cuisines like Italian, Chinese dishes, Hyderabadi, North Indian,</span> Burgers or Desserts 
+like Ice-cream or Cakes.</p></li>
+<li><h3>CHOOSE YOUR DISHES AND PAY ONLINE</h3>
+<p>Once Restaurant is finalised then you browse the restaurants see its reviews, and then Menu. Click on the dishes you have been waiting to enjoy and they get added to the cart automatically.</p>
+<p>That’s all once everything is in order hit on the checkout and pays online or cash on delivery, choose the way you want we accept all major credit cards or pay cash on delivery. 
+<span>You can order food online in cities and areas like Chennai, Delhi and very soon in Mumbai, Bangalore and Pune.</span></p>
+<p>Yes Jusfood is another way to live life with our loved ones...</p></li>
+</ul>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+<div id="inner-footer-bot13">
+Copyright © 2021 Jusfood.com. All Rights Reserved.
+</div>
+
+
+
+
+<a href="#" class="hidden-part-alert" data-reveal-id="popmodel"></a>
+<a href="http://yahoo.com" class="hidden-part-confirm" confirm data-reveal-id="popmodelconfirm"></a>
+
+<div id="popmodel" class="reveal-modal tiny" data-reveal style="border-radius:9px !important;">
+<div data-alert  id="title_alert" class="alert-box">This is a standard alert.</div>
+ <div class="insidepopup">
+  <p id="content_alert">I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+  <div class="row">
+  	<a onClick="$('a.close-reveal-modal').trigger('click');" class="button small success small-4  small-offset-4  columns" href="#" >Okay</a>
+  </div>
+  </div>
+</div>
+
+<div id="popmodelconfirm" class="reveal-modal tiny" data-reveal>
+<div data-alert  id="title_confirm" class="alert-box">This is a standard alert.</div>
+ <div class="insidepopup">
+  <p id="content_confirm">I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+  <div class="row">
+  	
+    <a  onClick="$('a.close-reveal-modal').trigger('click');" class="button small small-3  small-offset-3    columns" href="#" >Cancel</a>
+    <a id="href_confirm" class="button small success small-3   columns" href="#" >Yes</a>
+    <div class="small-3 columns"> </div>
+  </div>
+  </div><a class="close-reveal-modal closex">&#215;</a>
+</div>
+
+<!--Sign In POP UP-->
+<div id="firstModal" class="reveal-modal rcart" data-reveal>
+ <div class="row collapse sign-in">
+<h3>SIGN IN</h3>
+<a class="close-reveal-modal small"><img src="images/close.png" alt="close" /></a>
+
+  <div class="column large-3 small-3 sign-in ed" style="width:100% !important; padding:15px 15px 10px 35px;">
+  
+	<!--<div class="cust">
+ <label><a data-reveal-id="thirdModal" href="#"> &nbsp;<span class="sign_sm_txt">I'm a new customer</span></a></label>
+</div>
+  
+       <form data-abide action="https://jusfood.com/login_port.php"  method="post">
+     
+   <div class="ed">
+        <input type="text" pattern="email" style="width:96%;"  name="login_email" class="form-control"  id="log_email"  value="" required placeholder="E-mail" tabindex="1" />
+        <small class="error" style="width:96%;">Enter valid Email ID format</small>
+		</div>
+		<div class="ed">
+        <input type="password"  style="width:96%;" tabindex="2"  name="login_password" class="form-control" id="inpass" placeholder="Password"  onKeyPress="return submitenter(this,event)" required />
+		<input type="hidden" name="prev_page" value="http://jusfood.com/" />
+        <small class="error" style="width:96%;">Required</small>
+		</div>
+       
+       <input type="hidden" name="url" value="-1" />
+        
+        
+        <span class="sign_btn"><input type="submit" value="Submit" style="color:#fff; background:none; border:none; outline:none;"/></span> 
+         
+         <span class="pwddf"><a data-reveal-id="secondModal" href="#" style="color:#E67F23;">Forgot Password?</a></span> 
+         
+         <br/>
+        
+    </form>
+	<div class="or">
+	<img src="images/or.jpg" alt="or"/>
+</div>-->
+	<div class="sign-social">
+		<a><img src="images/sign-fb.jpg" alt="social-icons" onClick="checkFBLogin();"/></a>
+	<a><img src="images/sign-gplus.jpg" alt="social-icons"  onClick="checkGoogleLogin()"/></a>
+	</div>
+	
+	
+    </div>
+    
+</div>
+
+</div>
+<!--Sign In POP UP ends -->
+
+
+
+
+<!--Forgot Password POP UP-->
+<div id="secondModal" class="reveal-modal rcart" data-reveal>
+  <div class="row collapse sign-in">
+<h3>RESET MY PASSWORD</h3>
+<a class="close-reveal-modal"><img src="images/close.png" alt="close" /></a>
+  <div class="column large-3 small-3 sign-in" style="width:100% !important; padding:15px 15px 35px 35px;">
+      
+     <span style="color:#E67F23;"> A reset password link will be sent on your registered email id</span><br/><br/>
+
+      <form data-abide action="https://jusfood.com/fp.php"  method="post">
+        <div class="ed">
+        <input type="text" style="width:93%;"  name="fp_email" class="form-control"  id="fp_email"  value="" pattern="email" required placeholder="E-mail" />
+        <small class="error" style="width:93%;">Enter the valid Email ID</small>
+        
+       </div>
+        <input type="hidden" name="url" value="-1" />
+        
+        <input type="submit" value="Submit" style="" class="dd" aria-invalid="false"> 
+      </form>
+    
+    </div>
+    
+</div>
+</div>
+
+<!--Forgot Password POP UP ends -->
+
+
+
+
+
+<!--reset Password POP UP-->
+<div id="twoModal" class="reveal-modal rcart" data-reveal>
+  <div class="row collapse sign-in">
+<h3>NEW PASSWORD</h3>
+<a class="close-reveal-modal"><img src="images/close.png" alt="close" /></a>
+  <div class="column large-3 small-3 sign-in" style="width:100% !important; padding:15px 15px 35px 35px;">
+      
+     <span class="sign_sm_txt">Provide your new password for your account</span><br/><br/>
+
+      <form data-abide action="https://jusfood.com/sp.php"  method="post">
+        <div class="ed">
+        <input type="password" style="width:93%; "  name="password" class="form-control"  id="fp_pass"  required pattern="passwd" placeholder="New Password" />
+        <small class="error" style="width:93%;">Minimum 6 characters required</small>
+        </div><div class="ed">
+        
+        <input type="password" style="width:93%;"  name="cpassword" class="form-control"  id="fp_pass1"   required placeholder="Confirm New Password" data-equalto="fp_pass" />
+        <small class="error" style="width:93%;">Minimum 6 characters required</small>
+        </div>
+       
+        <input type="hidden" name="s" id="f_p_s" value="" />
+               <div>
+         	<input type="submit" value="Submit" style="" class="dd"/>
+         </div>
+         
+      </form>
+    
+    </div>
+    
+</div>
+</div>
+
+<!--reset Password POP UP ends -->
+
+
+
+
+<!--signup  POP UP-->
+  <div id="thirdModal" class="reveal-modal rcart" data-reveal>
+ <div class="row collapse sign-in">
+<h3>SIGN UP</h3>
+<a class="close-reveal-modal"><img src="images/close.png" alt="close" /></a>
+  <div class="column large-3 small-3 sign-in" style="width:100% !important; padding:15px 15px 10px 35px;">
+      
+     &nbsp;<a  data-reveal-id="firstModal"><span class="sign_sm_txt" id="firstModal">Yes, I have a account.</span></a>
+      <hr/>
+     
+      
+      <form data-abide action="https://jusfood.com/reg.php"  method="post">
+        
+        <div class="ed">
+          <input type="text"  style="width:93%; "  name="user_name"  placeholder="Enter your full name" class="form-control" id="inpass"  required  />
+          <small class="error" style="width:93%;">Required</small>
+        </div>
+        
+        
+       	<div class="ed"> <input type="text" style="width:93%;"  name="user_email" class="form-control"  placeholder="Enter your email address" data-abide-validator="ajax" data-page="ajax/check_email_exists.php" id="log_email"  required pattern="email" />
+        <small class="error" style="width:93%;">Required</small>
+		</div>
+        
+        <div class="ed">
+         <input type="text"  style="width:93%; "  name="user_mobile"  placeholder="Enter your 10 digit mobile number" class="form-control" id="inpass1"  required pattern="mobile_no"   maxlength="10"/>
+        <small class="error" style="width:93%;">Required</small></div>
+        
+         <div class="ed">
+         <input type="password"  style="width:93%; "  name="user_password"  placeholder="Enter your Password" class="form-control"  required id="user_pass" pattern="passwd"  />
+        <small class="error" style="width:93%;">Minimum 6 characters required</small></div>
+        
+       <div class="ed">
+        <input type="password"  style="width:93%;"  name="user_cpassword"  placeholder="Re-enter your Password" class="form-control" required id="user_cpass" data-equalto="user_pass" />
+        <small class="error" style="width:93%;">Password Mismatch</small></div>
+       
+         
+         <div class="sign_up_btm">
+         	<input type="submit" value="CREATE ACCOUNT" style="" class="dd"/>
+         </div>
+                    	
+      </form>
+    </div>
+    
+</div>
+
+</div>
+
+<!--signup  POP UP ends -->
+
+
+
+
+<style>
+
+span.sign_sm_txt {
+    color: #E67F23;
+    background-color: #ebdfcc;
+    padding: 8px 24px;
+    border-radius: 6px;
+}
+.cust {
+    float: right;
+    margin-bottom: 21px;
+    margin-right: 18px;
+}
+
+.sign-social {
+    text-align: -webkit-center;
+}
+
+.sign-social a img{
+    margin-bottom: 15px;
+}
+
+.or {
+    margin: 24px 0px 10px 5px;
+}
+
+.pwddf {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    border-radius: 5px;
+    float: right;
+    margin-right: 18px;
+    padding-left: 5px;
+}
+
+</style>
+
+
+
+
+
+
+<div style="display:none;">
+<div itemscope itemtype="http://schema.org/Restaurant">
+   <span itemprop="name"> Jusfood</span>
+
+   <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+     <span itemprop="ratingValue">5</span> stars - 
+     based on <span itemprop="reviewCount">5</span> reviews
+   </div>
+
+   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+     <span itemprop="streetAddress">G-9, P.A. Towers, 869 - PH Road, Kilpauk, </span>
+
+     <span itemprop="addressLocality">Chennai </span>,
+     <span itemprop="addressRegion">Tamil Nadu </span>
+     <span itemprop="postalCode">600 010 </span>
+   </div>
+   <span itemprop="telephone">044 4356 0539</span>
+   <a href="https://www.google.co.in/maps/place/Jusfood+-+Online+Food+Ordering/@13.083607,80.2370173,17z/data=!3m1!4b1!4m2!3m1!1s0x3a52667666923c87:0x7461b751f1618241" itemprop="maps">URL of Map</a>
+   <a itemprop="image" href="https://jusfood.com/images/logo.png">https://jusfood.com/</a> 
+
+   Categories:    <span itemprop="servesCuisine">
+     Multi Cuisine   </span>
+
+   Price Range: <span itemprop="priceRange">50 to 500</span>
+   Takes Reservations: Yes
+</div>
+
+
+
+<div itemscope itemtype="http://schema.org/Organization">
+   <a itemprop="url" href="https://jusfood.com/">Home</a>
+   <img itemprop="logo" src="https://jusfood.com/images/logo.png" />
+</div>
+</div>
+
+
+
+
+
+<script src='js/foundation/vendor/jquery.js'></script>
+<script src="js/foundation/foundation.min.js"></script>
+<script> // $(document).foundation(); </script>
+<script type="text/javascript" src="js/foundation/foundation/foundation.abide.js"></script>
+<script src="js/foundation/vendor/modernizr.js"></script>
+<script src="js/functions.js"></script>
+
+
+<script src="js/dropkick.js"></script>
+<link rel="stylesheet" type="text/css" href="js/dropkick.css">
+
+<!--dropdown-script-->
+<script src="js/dropkick.js"></script>
+<link rel="stylesheet" type="text/css" href="js/dropkick.css">
+
+<script>
+
+ $( ".mod").dropkick({
+        mobile: true
+      });
+</script>
+
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+      $('.default').dropkick();
+
+      $('.black').dropkick({
+        theme : 'black'
+      });
+
+      $('.change').dropkick({
+        change: function (value, label) {
+          alert('You picked: ' + label + ':' + value);
+        }
+      });
+
+      $('.existing_event').dropkick();
+
+      $('.custom_theme').dropkick({
+        theme: 'black',
+        change: function (value, label) {
+          $(this).dropkick('theme', value);
+        }
+      });
+
+      $('.dk_container').first().focus();
+    });
+	  </script>
+<!--dropdown-script-->
+<style>
+div#at-share-dock {
+    height: 48px;
+    display: inline-block;
+	top: 0% !important;
+}</style>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c854bfe04ed7d9" async="async"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+			$("input[name=feed_id]").val(1);
+});
+
+function submitforr(){
+	//console.log(1);
+	if(loc_lat!=''&&loc_lng!='')
+	{
+		$("form:visible").find("#crh").parent().removeClass("error");
+		var url='https://jusfood.com/restaurants/';
+	if(loc_lat==''||loc_lng==''){
+		url=url+$('#crh').val().replace("#","")+'||'+$("input[name=sub_way]").val()+'/';
+		//$("form:visible").find("#crh").parent().parent().submit();
+	}
+	else
+	{
+		url=url+$('#crh').val().replace("#","")+"||||"+loc_lat+'||'+loc_lng+'||'+$("input[name=sub_way]").val()+'/';
+		//$("form:visible").find("#crh").parent().parent().submit();
+	}
+	
+  if($('#crh').val()!=""){window.location=url+$("select[name=type]").val()+'/';} 
+   
+	}
+	else
+	{
+		//console.log(1);
+		$("form:visible").find("#crh").parent().addClass("error");
+	}
+  }
+  
+</script>
+<script>
+	function keypress_check() {
+		var keyword=$("#crh").val();
+var patt1=new RegExp("[0-9]");
+
+var isnum = /^\d+$/.test(keyword);
+		if(isnum)
+		{
+			if(keyword.length==6)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+		else
+		{
+			return true;
+		}
+	}
+	
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCzTnO5CyLXOBr-_AXP0fgABhYHH2AVcUw"></script>
+  <script>
+  function check_loc()
+  {
+	  if($("#crh").val()=='')
+	  {
+		  return false;
+	  }
+	  else if($("input[name=cityname]")=='')
+	  {
+		  return false;
+	  }
+	  else if((loc_lat==''||loc_lat=='')||(loc_lat=='undefined'||loc_lng=='undefined'))
+	  {
+		  return false;
+	  }
+	  else
+	  {
+		  return true;
+	  }
+  }
+var loc_lat='';
+var loc_lng='';
+var geocoder;
+var input;
+var test_file='Index.php';
+ //var input = (document.getElementById('crh'));
+  input=$("form:visible").find("#crh")[0];
+ //alert(input);
+ $( window ).resize(function() {
+  input=$("form:visible").find("#crh")[0];
+  initialize();
+});
+$(document).ready(function(e) {
+     input=$("form:visible").find("#crh")[0];
+	//alert(input);
+});
+//var countryRestrict = {'city': 'us'};
+function initialize() {
+		console.log('am enter');
+	//alert(input);
+	var southWest = new google.maps.LatLng( 13.214399, 80.082611 );
+var northEast = new google.maps.LatLng( 12.837766, 80.248092 );
+var chennaiBounds = new google.maps.LatLngBounds( southWest, northEast );
+
+var optionsac = {
+    bounds: chennaiBounds,
+    types:  [],  //['address'], ['establishment'], ['geocode'] 'regions'
+/*	    componentRestrictions: { country: 'in' }*/
+
+    componentRestrictions: {country: 'in' }
+};
+
+	
+   var autocomplete = new google.maps.places.Autocomplete(input,optionsac);
+   
+    
+  
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+  var place = autocomplete.getPlace();
+ // console.log(place);
+ if (typeof place.geometry != 'undefined') 
+  loc_lat=place.geometry.location.lat();
+  if (typeof place.geometry != 'undefined') 
+  loc_lng=place.geometry.location.lng();
+
+   $("#crh").val(place.formatted_address);
+   $("input[name=cityname]").val(place.formatted_address+"||||"+loc_lat+"||"+loc_lng)
+  var address = '';
+    if (place.address_components) {
+      address = [
+        (place.address_components[0] && place.address_components[0].short_name || ''),
+        (place.address_components[1] && place.address_components[1].short_name || ''),
+        (place.address_components[2] && place.address_components[2].short_name || '')
+      ].join(' ');
+    }
+	 submitforr();
+     console.log(  place.name + '|' + address);
+    });
+}
+//var input='';
+google.maps.event.addDomListener(input, 'keydown', function(e) { 
+    if (e.keyCode == 13) { 
+	setTimeout(function() {
+		
+ var firstResult = $(".pac-container .pac-item:first .pac-item-query").text()+' '+$(".pac-container .pac-item:first :not(.pac-item-query,.pac-matched)").text();
+                console.log(firstResult);
+                 geocoder = new google.maps.Geocoder();
+                geocoder.geocode({"address":firstResult }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+						$("#crh").val(results[0].formatted_address);
+                         loc_lat = results[0].geometry.location.lat();
+                            loc_lng = results[0].geometry.location.lng();
+						 $("input[name=cityname]").val(results[0].formatted_address.replace("#","")+"||||"+loc_lat+"||"+loc_lng);
+						 						 submitforr();
+						 							//$("#crh").val(firstResult);
+							//$(input).parent().find(".search_submit").click();
+                    }
+                    else
+                    {
+                        firstResult=$("#crh").val();
+                        
+                        
+                        geocoder.geocode({"address":firstResult }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+						$("#crh").val(results[0].formatted_address);
+                         loc_lat = results[0].geometry.location.lat();
+                            loc_lng = results[0].geometry.location.lng();
+						 $("input[name=cityname]").val(results[0].formatted_address.replace("#","")+"||||"+loc_lat+"||"+loc_lng);
+													 submitforr();
+							 							//$("#crh").val(firstResult);
+							//$(input).parent().find(".search_submit").click();
+                    }
+                    
+                });	
+                        
+                        
+                    }
+                });		
+	submitforr();
+}, 500);
+        e.preventDefault(); 
+    }
+  }); 
+  function getSubway() {
+	//alert('t');
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+		setTimeout(function() {
+		$('#sub_way').val(1);
+	    submitforr(); },500);
+    } else {
+       
+    }
+	
+	
+}
+
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+       
+    }
+}
+function showPosition(position) {
+	console.log(position.coords.latitude);
+	console.log(position.coords.longitude);
+   geocodeLatLng(position.coords.latitude,position.coords.longitude)
+}
+function geocodeLatLng(lat,lng) {
+        var input ;
+        var latlngStr ;
+        var latlng = {lat: lat, lng: lng};
+		geocoder = new google.maps.Geocoder();
+        geocoder.geocode({'location': latlng}, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+			  console.log(results);
+			  console.log(results);
+	            if (results[0]) {
+				$("#crh").val(results[0].formatted_address);
+				loc_lat=lat;
+				loc_lng=lng;
+				/*submitforr();*/
+            } else {
+				$("#crh").val('');
+				loc_lat='';
+				loc_lng='';
+             //console.log('No results found');
+            }
+          } else {
+				$("#crh").val('');
+				loc_lat='';
+				loc_lng='';
+            //console.log('Geocoder failed due to: ' + status);
+          }
+        });
+      }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+<script>
+$(document).ready(function(e) {
+});
+</script>
+
+
+<script>
+
+ $( ".mod").dropkick({
+        mobile: true
+      });
+</script>
+
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+      $('.default').dropkick();
+
+      $('.black').dropkick({
+        theme : 'black'
+      });
+
+      $('.change').dropkick({
+        change: function (value, label) {
+          alert('You picked: ' + label + ':' + value);
+        }
+      });
+
+      $('.existing_event').dropkick();
+
+      $('.custom_theme').dropkick({
+        theme: 'black',
+        change: function (value, label) {
+          $(this).dropkick('theme', value);
+        }
+      });
+
+      $('.dk_container').first().focus();
+    });
+  </script>
+
+<script type="text/javascript">
+
+var wid=$(window).width();
+var hei=$(window).height();
+$(document).ready(function(e) {
+/*if(wid>1320){
+	$("#iner-hm-mid1").show();
+	$("#iner-hm-mid2").hide();
+	}
+	else {
+	$("#iner-hm-mid1").hide();
+	$("#iner-hm-mid2").show();
+	}*/
+	if((hei-150)<530)
+	{
+		$('header').css("height",(500));
+	}
+	else
+	{
+		$('header').css("height",(hei-150));
+	}
+	//$('.select-city').find('.dk-option').removeClass('dk-option-selected');
+	var a=new Array();
+	
+	var check_loc=$('.select-city').find('.dk-option-selected').attr('data-value');
+	
+	if(1==check_loc)
+	{
+		
+		$('.select-city').find('.dk-option').removeClass('dk-option-selected');
+		$('.select-city').find('.dk-option[data-value='+1+']').addClass('dk-option-selected');
+	}
+	else
+	{
+		
+		$('.select-city').find('.dk-option').removeClass('dk-option-selected');
+		$('.select-city').find('.dk-selected ').html("Delhi");
+		$('.select-city').find('.dk-option[data-value='+1+']').addClass('dk-option-selected');
+	}
+	
+});
+function get_location()
+{
+	var location=$('.mod').parent().find('.dk-option-selected').attr('data-value');
+	
+	$('.loc_id').val(location);
+	$('#loc_form').submit();
+	
+}
+
+</script>
+<style>
+.sleep-video {
+            left: 0;
+            top: 0;
+            position:absolute;
+
+			width:100%;
+
+        }
+header
+{
+/*background-color: rgba(19, 19, 33, 0.62) !important;*/
+background-image:none !important;
+}
+.food-desc {
+    width: 100%;
+	
+    position: inherit;
+}
+.video-background {
+  background: url(images/bgbala.jpg) no-repeat center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
+    background-size: cover;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.video-foreground video
+	{
+		width:100%;
+		
+	}
+@media screen and (min-width:0em) and (max-width:475px){
+.video-foreground,
+.video-background iframe {
+	left:0%;
+}
+video.sleep-video1 {
+	width:auto;
+	height:100%;
+}
+.video-foreground .vid-img
+{
+	background:url(video/1400x748_mp4.gif) no-repeat center;
+	background-size:cover;
+	height:100vh;
+}
+.video-foreground video
+	{
+		width:100vw;
+		
+	}
+
+}
+@media only screen and (min-width: 90.063em){
+	.video-foreground video {
+	    width: 100%;
+	}
+	
+}
+
+</style>
+
+
+
+</body>
+</html>

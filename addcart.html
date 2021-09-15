@@ -8,10 +8,12 @@
     <title>cartitems</title>
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/enjoyicon - Copy.png">
 </head>
 
 <body>
     <header id="header"></header>
+    
 
     <section class="add-cart-section">
         
@@ -24,9 +26,8 @@
                     <th id="name">FoodName</th>
                     <th id="price">Price</th>
                     <th id="qty">Quantity</th>
-                    <th id="total">Amount</th>
+                      <th id="total">Amount</th>
                     <th id="action">Actions</th>
-
                 </tr>
 </thead>
             <tbody id="cart-table">
@@ -37,11 +38,17 @@
         <button class="order-btn"> <a   href="order.html"  >Order Now</a></button>
 
  
-    </section>>
+    </section>
+    <div class="footer-section"></div>
 
+    <footer id="footer"></footer>
     <script src="js/route.js"></script>
     <script src="js/jquery.js"></script>
    <script src="js/addcart.js"></script>
+   <script>
+   $("#header").load("header.html");
+   $("#footer").load("footer.html");
+</script>
 
 </body>
 
