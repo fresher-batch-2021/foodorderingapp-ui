@@ -5,6 +5,9 @@ let count = 0;
 
 foodservice.veglist().then(res => {
         let data = res.data.rows;
+        if(res)
+        {
+            hideLoader();
         let images = data.map(obj => obj.doc);
 
         console.log(images);
@@ -14,13 +17,16 @@ foodservice.veglist().then(res => {
 
             content = content + `
             <div class="card">
+            <figure>
             <img class="veg-div" src="images/${img.imageUrl}"
             alt="chicken">
+            
             <div class="product-detail-container">
-            <h4><b>${img.name}</b></h4>
+            <figcaption><b>${img.name}</b></figcaption>
         
-            <p>MRP:₹${img.price}.00</p>
-            <button><a href="addcart.html?foodname=${img.name}&price=${img.price}" class="add-cart-Button">Add to Cart</a></button>
+     <figcaption><p>MRP:₹${img.price}.00</p></figcaption>
+            </figure>
+            <button><a href="addcart.html?foodname=${img.name}&price=${img.price}" class="add-cart-button">Add to Cart</a></button>
 
 
             </div>
@@ -31,8 +37,10 @@ foodservice.veglist().then(res => {
                 count = 0;
             }
         }
+    
 
         document.querySelector("#vegcontainer").innerHTML = content;
+    }
     })
     .catch((err) => {
         console.log(err.response.data);
@@ -42,3 +50,10 @@ foodservice.veglist().then(res => {
 
 }
 vegItems();
+function hideLoader()
+{
+    document.querySelector(".loader").style.display="none";
+}
+
+
+

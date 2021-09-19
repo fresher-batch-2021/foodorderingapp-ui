@@ -118,6 +118,14 @@ body {
 .foodheader {
     text-align: center;
 }
+/* -------foodlist------------- */
+
+.foodListAdm caption{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 20px;
+}
+
 
 .foodListAdm table,
 tr,
@@ -129,18 +137,20 @@ td {
 
 .foodListAdm {
     margin-top: 10%;
-    margin-left: 15%;
+    margin-left: 1%;
     border-collapse: collapse;
 
 }
 .foodList-img{
     width: 30%;
+    margin-left: 40%;
 
 }
 
 
+/* ----------------addfood------------------- */
 .add-food-section {
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .add-food-section h2 {
@@ -171,11 +181,15 @@ td {
     background-color: green;
     color: white;
     font-size: 15px;
-    /* padding-right: 81%; */
     border: none;
     padding: 3% 41%;
     text-align: center;
     margin: 5% auto;
+}
+.add-food-section form>button a{
+
+text-decoration: none;
+color: white;
 }
 
 

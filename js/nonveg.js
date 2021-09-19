@@ -3,6 +3,10 @@ let content = "";
 let count = 0;
 foodservice.nonveglist().then(res => {
     let data = res.data.rows;
+    if(res)
+    {
+        hideLoader();
+
     let images = data.map(obj => obj.doc);
 
         
@@ -31,6 +35,8 @@ foodservice.nonveglist().then(res => {
         }
 
         document.querySelector("#vegcontainer").innerHTML = content;
+    } 
+
     })
     .catch((err) => {
         console.log(err.response.data);
@@ -39,3 +45,7 @@ foodservice.nonveglist().then(res => {
     })
 }
 nonveglist();
+function hideLoader()
+{
+    document.querySelector(".loader").style.display="none";
+}

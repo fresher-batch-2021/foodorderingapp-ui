@@ -24,7 +24,7 @@ function listData() {
             <td>   ${foodList.name} </td> 
             <td>   <img class="foodList-img"src="images/${foodList.imageUrl}" alt="food image"  >  </td> 
             <td>   ${foodList.price }</td> 
-            <td>   ${foodList.Quantity }</td><td><input type="button" id="deleteButton" value="Delete" onclick="deleteRow('${foodList._id}', '${foodList._rev}')" />&ensp;<button><a href='update-food-admin.html?id=${foodList._id}' style="text-decoration:none;">Edit</a></button></td>
+            <td>   ${foodList.Quantity }</td><td><input type="button" id="deleteButton" value="Delete" onclick="deleteRow('${foodList._id}', '${foodList._rev}')" />&ensp;<button ><a href='update-food-admin.html?id=${foodList._id}' style="text-decoration:none;">Edit</a></button></td>
             
             </tr>`;
 

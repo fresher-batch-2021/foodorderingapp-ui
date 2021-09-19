@@ -3,7 +3,9 @@
 
         <div class="navbar-brand">
             <div class="navbar-brand-logo" >
-                <a href="index.html"><img src="images/Express Eats.png" alt="img"></a>
+                <a href="index.html"> <figure><img src="images/Express Eats.png" alt="brand logo image"></a></figure>
+
+                    
         </div>
 
         </div>
@@ -11,10 +13,12 @@
            
 
             <input type="text"  id="search" placeholder="search">
-           <a onclick="searchFood()"><img class="searchbar" src="images/searchbar.png" alt="searchbar"></a>         
+           <a onclick="searchFood()"><figure><img class="searchbar" src="images/searchbar.png" alt="searchbar"></a>   </figure>      
         </div>
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
             <li class="nav-item"><a class="nav-link" href="myorder.html">My order</a></li>
              </ul>
 
@@ -41,23 +45,11 @@ if (userStatus != null) {
     } if (userStatus.role == "user"){
         $(".nav-item[data-loggedin='false']").show();
     }
-    // localStorage.setItem("isLoggedIn",JSON.stringify(true))
-    // $(".nav-item[data-loggedin='true']").hide();
- 
-    // $("#profile").html("Welcome " + user.email + "!!!");
-
-    // if (userStatus.role == 'user') {
-            // $(".nav-item[data-role='admin']").show();
-        // }
-
-// if (userStatus.role == 'admin') {
-    // $(".nav-item[data-role='user']").hide();
-// }
+    
 } 
 
 else {
-    // alert("hi")
-    // localStorage.setItem("isLoggedIn",JSON.stringify(false))
+    
     $(".nav-item[data-loggedin='true'] ").hide();
     $(".nav-item[data-loggedin='false']").show();
     $(".nav-item[data-role='user']").hide();

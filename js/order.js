@@ -24,7 +24,7 @@ function orderNow() {
         } else if (address === "" || address === null || address.trim() == "") {
             alert("Address cannot be blank");
         } else {
-
+           
         let orderNow = {
             name: name,
             phonenumber: phonenumber,
@@ -37,11 +37,15 @@ function orderNow() {
             email: loggedInEmail
         };
         console.log(orderNow);
+        // move();
+
+        
         foodservice.orderFood(orderNow).then(res => {
+
             toastr.success("your order successfully placed");
             setTimeout(function() {
                 window.location.href = "index.html"
-            }, 3000);
+            }, 1000);
             localStorage.removeItem("PRODUCTS");
             localStorage.removeItem("cartCount");
         }).catch(err => {
@@ -51,13 +55,39 @@ function orderNow() {
         console.log(err.message);
         alert(err.message);
     }
+
+};
+
+
+
+// window.addEventListener('DOMContentLoaded', (event) => {
+
+
+//     //set total amount in textbox value
+//     document.querySelector("#totalAmount").value=BillCalculator.getTotalAmount();
+//
+
+
+var i = 0;
+function move() {
+    // event.preventDefault();
+    var progress = document.getElementById("myProgress");
+     progress.style.display="block";
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 50);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
 }
-
-window.addEventListener('DOMContentLoaded', (event) => {
-
-
-    //set total amount in textbox value
-    document.querySelector("#totalAmount").value=BillCalculator.getTotalAmount();
-}
-
-);
+move();

@@ -77,7 +77,7 @@ function addtocart()
         console.log(total);
         itemList =
             itemList +
-            "<tr><td>" + count + "</td><td>" + list.foodname + "</td><td>" + list.price + "</td><td>" + list.Quantity + "</td><td>" + total + "</td><td>" + `<button type="button" onclick="deleteCartData(${count - 1})"> delete </button>` + "</td>";
+            "<tr><td>" + count + "</td><td>" + list.foodname + "</td><td>" + list.price + "</td><td>" + list.Quantity + "</td><td>" + total + "</td><td>" + `<button type="button" onclick="deleteCartData(${count - 1})"> <i class="material-icons">delete</i></button>` + "</td>";
         count++;
         sum = sum + total;
         console.log(sum);

@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/enjoyicon - Copy.png">
 </head>
-
-<body>
+    <body>
     <header id="header"></header>  
    
     <h2 class="subheading"> Order Form </h2>
@@ -29,14 +28,17 @@
         <input type="time" name="DeliveryTime" id="DeliveryTime" required placeholder="Enter the time" autocomplete="off"><br>
        <label for="address">Address</label><br>
         <input type="text" name="address" id="address" required placeholder="Enter the valid address" autocomplete="off"><br>
-        <label for="totalAmount">Total Amount</label><br>
-        <input type="text" name="totalAmount" id="totalAmount" required placeholder="Enter Total Amount" autocomplete="off"><br>
         <label >Select Payment</label>
         <select name="payment" id="payment" required>
             <option>Cash on Delivery</option>
         </select>
         <button class="place-order-btn" type="submit"><a href="myorder.html"> Place Order</a></button><br>
         <button class="cancel-btn" type="button"> <a href="index.html">Cancel </a></button>
+        
+        <div id="myProgress">
+            <div id="myBar"></div>
+          </div>
+    
     </form>
     <div class="footer-section"></div>
     <footer id="footer"></footer> 
